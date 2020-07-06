@@ -9,6 +9,7 @@ class Tour extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('Tour_model');
+        $this->load->model('Tourtype_model');
     } 
 
     /*
@@ -17,7 +18,7 @@ class Tour extends CI_Controller{
     function index()
     {
         $data['tour'] = $this->Tour_model->get_all_tour();
-        
+        $data['tourtype'] = $this->Tourtype_model->get_all_tourtype();
         $data['_view'] = 'tour/index';
         $this->load->view('layouts/main',$data);
     }
@@ -48,6 +49,7 @@ class Tour extends CI_Controller{
         }
         else
         {            
+            $data['tourtype'] = $this->Tourtype_model->get_all_tourtype();
             $data['_view'] = 'tour/add';
             $this->load->view('layouts/main',$data);
         }

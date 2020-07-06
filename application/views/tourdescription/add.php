@@ -8,7 +8,7 @@
           	<div class="box-body">
           		<div class="row clearfix">
 					<div class="col-md-6">
-						<label for="Description" class="control-label">Description</label>
+						<label for="Description" class="control-label">Giới thiệu</label>
 						<div class="form-group">
 							<input type="text" name="Description" value="<?php echo $this->input->post('Description'); ?>" class="form-control" id="Description" />
 						</div>
@@ -20,19 +20,24 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="Image" class="control-label">Image</label>
+						<label for="Image" class="control-label">Hình ảnh</label>
 						<div class="form-group">
-							<input type="text" name="Image" value="<?php echo $this->input->post('Image'); ?>" class="form-control" id="Image" />
+							<input type="file" name="Image" value="<?php echo $this->input->post('Image'); ?>" class="form-control" id="Image" />
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="IdTour" class="control-label">IdTour</label>
+						<label for="IdTour" class="control-label">Tên tour</label>
 						<div class="form-group">
-							<input type="text" name="IdTour" value="<?php echo $this->input->post('IdTour'); ?>" class="form-control" id="IdTour" />
+						<select name="IdTour" id="IdTour" class="form-control"><option value="0">Chọn tour</option><?php
+							foreach($tour as $t)
+							{?>
+								<option value="<?php echo $t['IdTour']; ?>"><?php echo $t["Name"]?></option>;
+							<?php }
+							?></select>
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="Note" class="control-label">Note</label>
+						<label for="Note" class="control-label">Ghi chú</label>
 						<div class="form-group">
 							<input type="text" name="Note" value="<?php echo $this->input->post('Note'); ?>" class="form-control" id="Note" />
 						</div>

@@ -11,18 +11,18 @@
                 <table class="table table-striped">
                     <tr>
 						<th>IdTour</th>
-						<th>Name</th>
-						<th>Schedule</th>
-						<th>Start</th>
-						<th>NoDay</th>
-						<th>NoNight</th>
-						<th>Vehicle</th>
-						<th>Hotel</th>
-						<th>NoTicket</th>
-						<th>Price</th>
-						<th>IdTourType</th>
-						<th>Note</th>
-						<th>Actions</th>
+						<th>Tên</th>
+						<th>Lịch trình</th>
+						<th>Nơi khởi hành</th>
+						<th>Số ngày</th>
+						<th>Số đêm</th>
+						<th>Phuông tiện</th>
+						<th>Khách sạn</th>
+						<th>Số lượng vé</th>
+						<th>Giá</th>
+						<th>Loại tour</th>
+						<th>Ghi chú</th>
+						<th>Hành sự</th>
                     </tr>
                     <?php foreach($tour as $t){ ?>
                     <tr>
@@ -36,7 +36,7 @@
 						<td><?php echo $t['Hotel']; ?></td>
 						<td><?php echo $t['NoTicket']; ?></td>
 						<td><?php echo $t['Price']; ?></td>
-						<td><?php echo $t['IdTourType']; ?></td>
+						<td><?php echo $this->Tourtype_model->get_tourtype($t["IdTourType"])["Name"]; ?></td>
 						<td><?php echo $t['Note']; ?></td>
 						<td>
                             <a href="<?php echo site_url('tour/edit/'.$t['IdTour']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 

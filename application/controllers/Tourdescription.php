@@ -9,6 +9,7 @@ class Tourdescription extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('Tourdescription_model');
+        $this->load->model('Tour_model');
     } 
 
     /*
@@ -41,7 +42,8 @@ class Tourdescription extends CI_Controller{
             redirect('tourdescription/index');
         }
         else
-        {            
+        {         
+            $data['tour'] = $this->Tour_model->get_all_tour();   
             $data['_view'] = 'tourdescription/add';
             $this->load->view('layouts/main',$data);
         }
