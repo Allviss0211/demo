@@ -20,6 +20,14 @@ class Tour_model extends CI_Model
     }
         
     /*
+     * Get tour by IdTourType
+     */
+    function get_tour_by_idtourtype($IdTourType)
+    {
+        return $this->db->get_where('tour',array('IdTourType'=>$IdTourType))->result_array();
+    }
+
+    /*
      * Get all tour
      */
     function get_all_tour()

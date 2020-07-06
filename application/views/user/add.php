@@ -40,7 +40,7 @@
 					<div class="col-md-6">
 						<label for="Birthday" class="control-label">Birthday</label>
 						<div class="form-group">
-							<input type="text" name="Birthday" value="<?php echo $this->input->post('Birthday'); ?>" class="has-datepicker form-control" id="Birthday" />
+							<input type="date" name="Birthday" value="<?php echo $this->input->post('Birthday'); ?>" class="form-control" id="Birthday" />
 						</div>
 					</div>
 					<div class="col-md-6">
