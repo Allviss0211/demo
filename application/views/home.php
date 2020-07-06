@@ -58,7 +58,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-primary display-4" href="<?=base_url("home")?>"><span
+                        <a class="nav-link link text-primary display-4" href="<?=base_url()?>"><span
                                 class="thwib-home thw-iconfont thw-iconfont-btn"></span>Trang chủ &nbsp; &nbsp; &nbsp;
                             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a>
                     </li>
@@ -93,7 +93,7 @@
                     <p></p>
                     <div class="thw-section-btn"><a class="btn btn-md btn-primary display-4" href="<?=base_url("trong_nuoc")?>">Tour
                             Trong Nước</a>
-                        <a class="btn btn-md btn-white-outline display-4" href="page4.html">Tour Ngoài Nước</a></div>
+                        <a class="btn btn-md btn-white-outline display-4" href="<?=base_url("trong_nuoc")?>">Tour Ngoài Nước</a></div>
                 </div>
             </div>
         </div>
@@ -142,11 +142,6 @@
                                     <span class="thw-iconfont thw-iconfont-social socicon-facebook socicon"></span>
                                 </a>
                             </div>
-
-
-
-
-
                         </div>
                     </div>
                 </div>

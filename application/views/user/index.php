@@ -4,24 +4,24 @@
             <div class="box-header">
                 <h3 class="box-title">User Listing</h3>
             	<div class="box-tools">
-                    <a href="<?php echo site_url('user/add'); ?>" class="btn btn-success btn-sm">Add</a> 
+                    <a href="<?php echo site_url('user/add'); ?>" class="btn btn-success btn-sm">Thêm</a> 
                 </div>
             </div>
             <div class="box-body">
                 <table class="table table-striped">
                     <tr>
-						<th>IdUser</th>
-						<th>Username</th>
-						<th>Password</th>
-						<th>IdDecentralization</th>
-						<th>Fullname</th>
-						<th>IdentityCard</th>
-						<th>Birthday</th>
-						<th>Phone</th>
+						<th>Mã số</th>
+						<th>Tài khoản</th>
+						<th>Mật khẩu</th>
+						<th>Vai trò</th>
+						<th>Họ tên</th>
+						<th>Chứng minh thư</th>
+						<th>Ngày sinh</th>
+						<th>Số điện thoại</th>
 						<th>Email</th>
-						<th>Address</th>
-						<th>Note</th>
-						<th>Actions</th>
+						<th>Địa chỉ</th>
+						<th>Ghi chú</th>
+						<th>Thao tác</th>
                     </tr>
                     <?php foreach($user as $u){ ?>
                     <tr>
@@ -37,8 +37,8 @@
 						<td><?php echo $u['Address']; ?></td>
 						<td><?php echo $u['Note']; ?></td>
 						<td>
-                            <a href="<?php echo site_url('user/edit/'.$u['IdUser']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
-                            <a href="<?php echo site_url('user/remove/'.$u['IdUser']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Delete</a>
+                            <a href="<?php echo site_url('user/edit/'.$u['IdUser']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Sửa</a> 
+                            <a href="<?php echo site_url('user/remove/'.$u['IdUser']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Xóa</a>
                         </td>
                     </tr>
                     <?php } ?>
