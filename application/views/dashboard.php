@@ -3,7 +3,7 @@
         <div class="box">
             <div class="box-header">
                 <h3 class="box-title">
-                Xin chào <?php echo $user['Fullname'] ?> <br>
+                Xin chào <?php echo $_SESSION['lgFullname']  ?> <br>
                 Chúc một ngày tốt lành
                 </h3>
             </div>

@@ -13,8 +13,6 @@ class Dashboard extends CI_Controller{
 
     function index()
     {
-        $id = $_GET['id'];
-        $data['user'] = $this->User_model->get_user($id);
         $data['_view'] = 'dashboard';
         $this->load->view('layouts/main',$data);
     }

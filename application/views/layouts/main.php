@@ -28,7 +28,7 @@
             <!-- Logo -->
             <a href="" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini">Tourist Half Way</span>
+                <span class="logo-mini">THW</span>
                 <!-- logo for regular state and mobile devices -->
                 <span class="logo-lg">Tourist Half Way</span>
             </a>
@@ -92,7 +92,7 @@
                 <ul class="sidebar-menu">
                     <li class="header">MAIN NAVIGATION</li>
                     <li>
-                        <a href="<?php echo site_url(); ?>">
+                        <a href="<?php echo site_url('dashboard'); ?>">
                             <i class="fa fa-dashboard"></i> <span>Bảng điều khiển</span>
                         </a>
                     </li>
