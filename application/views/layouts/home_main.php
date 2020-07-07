@@ -55,7 +55,7 @@
                         if (isset($_SESSION["isLogin"])) { 
                             if (isset($_SESSION["lgRole"]) && $_SESSION["lgRole"] == 1) { ?>
                                 <a class="nav-link link text-primary display-4" href="<?= base_url("dashboard?id={$_SESSION['lgIdUser']}") ?>"><span class="thwib-info thw-iconfont thw-iconfont-btn">
-                                    </span><?php echo $_SESSION["lgFullname"] ?> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    </span><?php echo $_SESSION["lgFullname"] ?> &nbsp; &nbsp; &nbsp;&nbsp;
                                 </a>
                             <?php } else { ?>
                                 <a class="nav-link link text-primary display-4" href=""><span class="thwib-info thw-iconfont thw-iconfont-btn">
