@@ -62,10 +62,10 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                 <div class="pull-left">
-                                        <a href="home" class="btn btn-default btn-flat">Trang chủ</a>
+                                        <a href="<?php echo base_url() ?>" class="btn btn-default btn-flat">Trang chủ</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="user/logout" class="btn btn-default btn-flat">Đăng xuất</a>
+                                        <a href="<?php echo base_url('user/logout') ?>" class="btn btn-default btn-flat">Đăng xuất</a>
                                     </div>
                                 </li>
                             </ul>
