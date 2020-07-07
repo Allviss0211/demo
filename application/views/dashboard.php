@@ -3,7 +3,8 @@
         <div class="box">
             <div class="box-header">
                 <h3 class="box-title">
-                    Please navigate to the appropriate controller / action to open the associated function with your generated code.
+                Xin chào <?php echo $user['Fullname'] ?> <br>
+                Chúc một ngày tốt lành
                 </h3>
             </div>
         </div>

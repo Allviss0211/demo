@@ -19,6 +19,14 @@ class User_model extends CI_Model
         return $this->db->get_where('user',array('IdUser'=>$IdUser))->row_array();
     }
         
+    function login($username, $password){
+        return $this->db->get_where('user',array('Username'=>$username,'Password'=>$password))->row_array();
+    }
+
+    function check_user($username){
+        return $this->db->get_where('user',array('Username'=>$username))->result_array();
+    }
+
     /*
      * Get all user
      */
