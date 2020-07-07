@@ -59,24 +59,24 @@
                                 </a>
                             <?php } else { ?>
                                 <a class="nav-link link text-primary display-4" href=""><span class="thwib-info thw-iconfont thw-iconfont-btn">
-                                    </span><?php echo $_SESSION["lgFullname"] ?>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    </span><?php echo $_SESSION["lgFullname"] ?>&nbsp; &nbsp; &nbsp;&nbsp;
                                 </a>
                             <?php }
                         } else { ?>
                             <a class="nav-link link text-primary display-4" href="user/login"><span class="thwib-lock thw-iconfont thw-iconfont-btn">
-                                </span>Đăng nhập &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </span>Đăng nhập &nbsp; &nbsp; &nbsp;&nbsp;
                             </a>
                         <?php  }
                         ?>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link text-primary display-4" href="<?= base_url("home") ?>"><span class="thwib-home thw-iconfont thw-iconfont-btn"></span>Trang chủ &nbsp; &nbsp; &nbsp;
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a>
+                            &nbsp; </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="<?= base_url("tour/event") ?>"><span class="thwib-gift thw-iconfont thw-iconfont-btn"></span>Sự kiện &nbsp; &nbsp; &nbsp;
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li>
-                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="<?= base_url("home") ?>"><span class="thwib-contact-form thw-iconfont thw-iconfont-btn"></span>
-                            Giới thiệu &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
+                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="page3.html"><span class="thwib-gift thw-iconfont thw-iconfont-btn"></span>Sự kiện &nbsp; &nbsp; &nbsp;
+                            &nbsp; </a></li>
+                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="page1.html"><span class="thwib-contact-form thw-iconfont thw-iconfont-btn"></span>
+                            Giới thiệu &nbsp; &nbsp; &nbsp; &nbsp; </a></li>
                 </ul>
 
             </div>
