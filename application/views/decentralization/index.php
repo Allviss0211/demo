@@ -10,14 +10,14 @@
             <div class="box-body">
                 <table class="table table-striped">
                     <tr>
-						<th>IdDecentralization</th>
-						<th>Name</th>
-						<th>Note</th>
-						<th>Actions</th>
+						<!-- <th>IdDecentralization</th> -->
+						<th>Tên</th>
+						<th>Ghi chú</th>
+						<th>Thao tác</th>
                     </tr>
                     <?php foreach($decentralization as $d){ ?>
                     <tr>
-						<td><?php echo $d['IdDecentralization']; ?></td>
+						<!-- <td><?php echo $d['IdDecentralization']; ?></td> -->
 						<td><?php echo $d['Name']; ?></td>
 						<td><?php echo $d['Note']; ?></td>
 						<td>
@@ -27,7 +27,6 @@
                     </tr>
                     <?php } ?>
                 </table>
-                                
             </div>
         </div>
     </div>

@@ -81,6 +81,7 @@ class Tour extends CI_Controller{
             }
             else
             {
+                $data['tourtype'] = $this->Tourtype_model->get_all_tourtype();
                 $data['_view'] = 'tour/edit';
                 $this->load->view('layouts/main',$data);
             }

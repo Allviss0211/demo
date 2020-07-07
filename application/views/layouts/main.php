@@ -54,7 +54,6 @@
                                 <!-- User image -->
                                 <li class="user-header">
                                     <img src="<?php echo site_url('/resources/img/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
-
                                     <p>
                                     <?php echo $_SESSION['lgFullname'] ?>
                                     </p>
