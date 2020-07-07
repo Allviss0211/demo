@@ -18,6 +18,20 @@ class Tour extends CI_Controller{
         $this->load->view('layouts/main',$data);
     }
 
+    public function inbound()
+	{
+		$data['tour'] = $this->Tour_model->get_tour_by_idtourtype('1');
+		$data['_view'] = 'tour/inbound';
+		$this->load->view('layouts/home_main', $data);
+	}
+
+
+    public function outbound()
+	{
+		$data['tour'] = $this->Tour_model->get_tour_by_idtourtype('2');
+		$data['_view'] = 'tour/outbound';
+		$this->load->view('layouts/home_main', $data);
+	}
     /*
      * Adding a new tour
      */

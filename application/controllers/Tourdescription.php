@@ -70,7 +70,7 @@ class Tourdescription extends CI_Controller{
             }
             else
             {
-                $data['tour'] = $this->Tour_model->get_all_tour();   
+                $data['tour'] = $this->Tour_model->get_all_tour(); 
                 $data['_view'] = 'tourdescription/edit';
                 $this->load->view('layouts/main',$data);
             }

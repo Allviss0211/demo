@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="\resources\css\style.css">
 
 
+
 </head>
 
 <body>
@@ -143,6 +144,9 @@
         <script src="../assets/touchswipe/jquery.touch-swipe.min.js"></script>
         <script src="../assets/smoothscroll/smooth-scroll.js"></script>
         <script src="../assets/theme/js/script.js"></script>
+        <script src="../assets/ytplayer/jquery.mb.ytplayer.min.js"></script>
+        <script src="../assets/vimeoplayer/jquery.mb.vimeo_player.js"></script>
+
 
 
 </body>

@@ -13,9 +13,9 @@
                         Hãy để Tourist Half Way đưa bạn đến với tận cùng của sự hưởng thụ.&nbsp;</p>
                     <p></p>
                     <p></p>
-                    <div class="thw-section-btn"><a class="btn btn-md btn-primary display-4" href="<?= base_url("trong_nuoc") ?>">Tour
+                    <div class="thw-section-btn"><a class="btn btn-md btn-primary display-4" href="<?= base_url("tour/inbound") ?>">Tour
                             Trong Nước</a>
-                        <a class="btn btn-md btn-white-outline display-4" href="<?= base_url("trong_nuoc") ?>">Tour Ngoài Nước</a></div>
+                        <a class="btn btn-md btn-white-outline display-4" href="<?= base_url("tour/outbound") ?>">Tour Ngoài Nước</a></div>
                 </div>
             </div>
         </div>

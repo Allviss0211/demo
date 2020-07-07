@@ -22,7 +22,7 @@
 					<div class="col-md-6">
 						<label for="Image" class="control-label">Hình ảnh</label>
 						<div class="form-group">
-						<input type="file" name="Image" value="<?php echo $this->input->post('Image'); ?>" class="form-control" id="Image" />
+							<input type="file" name="Image" value="<?php echo ($this->input->post('Image') ? $this->input->post('Image') : $tourdescription['Image']); ?>" class="form-control" id="Image" />
 						</div>
 					</div>
 					<div class="col-md-6">
