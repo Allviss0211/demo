@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>THW</title>
-        <!-- Tell the browser to be responsive to screen width -->
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <!-- Bootstrap 3.3.6 -->
-        <link rel="stylesheet" href="<?php echo site_url('/resources/css/bootstrap.min.css');?>">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="<?php echo site_url('/resources/css/font-awesome.min.css');?>">
-        <!-- Ionicons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-        <!-- Datetimepicker -->
-        <link rel="stylesheet" href="<?php echo site_url('/resources/css/bootstrap-datetimepicker.min.css');?>">
-        <!-- Theme style -->
-        <link rel="stylesheet" href="<?php echo site_url('/resources/css/AdminLTE.min.css');?>">
-        <!-- AdminLTE Skins. Choose a skin from the css/skins
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tourist Half Way</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="<?php echo site_url('/resources/css/bootstrap.min.css'); ?>">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="<?php echo site_url('/resources/css/font-awesome.min.css'); ?>">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Datetimepicker -->
+    <link rel="stylesheet" href="<?php echo site_url('../resources/css/bootstrap-datetimepicker.min.css'); ?>">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="<?php echo site_url('/resources/css/AdminLTE.min.css'); ?>">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
              folder instead of downloading all of them to reduce the load. -->
-        <link rel="stylesheet" href="<?php echo site_url('/resources/css/_all-skins.min.css');?>">
-    </head>
-    
-    <body class="hold-transition skin-blue sidebar-mini">
-        <div class="wrapper">
-            <header class="main-header">
-                <!-- Logo -->
-                <a href="" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini">THW</span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg">THW</span>
+    <link rel="stylesheet" href="<?php echo site_url('/resources/css/_all-skins.min.css'); ?>">
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini">Tourist Half Way</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg">Tourist Half Way</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </a>
 
                 <div class="navbar-custom-menu">
@@ -38,7 +48,7 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="https://i.ibb.co/bd3TR85/93873276-892093347905185-1182473014202073088-n.jpg" class="user-image" alt="User Image">
-                                <span class="hidden-xs"> <?php echo $user['Fullname'] ?> </span>
+                                <span class="hidden-xs"> <?php echo $_SESSION['lgFullname'] ?> </span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
@@ -46,8 +56,7 @@
                                     <img src="<?php echo site_url('/resources/img/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
 
                                     <p>
-                                    <?php echo $user['Fullname'] ?>
-                                        <small>CEO Tourist Half Way</small>
+                                    <?php echo $_SESSION['lgFullname'] ?>
                                     </p>
                                 </li>
                                 <!-- Menu Footer-->
@@ -56,88 +65,10 @@
                                         <a href="home" class="btn btn-default btn-flat">Trang chủ</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="logout" class="btn btn-default btn-flat">Đăng xuất</a>
+                                        <a href="user/logout" class="btn btn-default btn-flat">Đăng xuất</a>
                                     </div>
                                 </li>
                             </ul>
-                        </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Thông tin hóa đơn</span>
-                            </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('billinfo/add');?>"><i class="fa fa-plus"></i> Thêm</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('billinfo/index');?>"><i class="fa fa-list-ul"></i> Danh sách</a>
-                                </li>
-							</ul>
-                        </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Phân quyền</span>
-                            </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('decentralization/add');?>"><i class="fa fa-plus"></i> Thêm</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('decentralization/index');?>"><i class="fa fa-list-ul"></i> Danh sách</a>
-                                </li>
-							</ul>
-                        </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Tour</span>
-                            </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('tour/add');?>"><i class="fa fa-plus"></i> Thêm</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('tour/index');?>"><i class="fa fa-list-ul"></i> Danh sách</a>
-                                </li>
-							</ul>
-                        </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Chi tiết Tour</span>
-                            </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('tourdescription/add');?>"><i class="fa fa-plus"></i> Thêm</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('tourdescription/index');?>"><i class="fa fa-list-ul"></i> Danh sách</a>
-                                </li>
-							</ul>
-                        </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Hình thức Tour</span>
-                            </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('tourtype/add');?>"><i class="fa fa-plus"></i> Thêm</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('tourtype/index');?>"><i class="fa fa-list-ul"></i> Danh sách</a>
-                                </li>
-							</ul>
-                        </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Người dùng</span>
-                            </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('user/add');?>"><i class="fa fa-plus"></i> Thêm</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('user/index');?>"><i class="fa fa-list-ul"></i> Danh sách</a>
-                                </li>
-							</ul>
                         </li>
                     </ul>
                 </div>
@@ -153,7 +84,7 @@
                         <img src="<?php echo site_url('resources/img/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                        <p><?php echo $user['Fullname'] ?></p>
+                        <p><?php echo $_SESSION['lgFullname'] ?></p>
                         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>
                 </div>
@@ -167,7 +98,7 @@
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-desktop"></i> <span>Bill</span>
+                            <i class="fa fa-desktop"></i> <span>Hóa đơn</span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="active">
@@ -180,7 +111,7 @@
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-desktop"></i> <span>Billinfo</span>
+                            <i class="fa fa-desktop"></i> <span>Thông tin hóa đơn</span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="active">
@@ -193,7 +124,7 @@
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-desktop"></i> <span>Decentralization</span>
+                            <i class="fa fa-desktop"></i> <span>Phân quyền</span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="active">
@@ -219,7 +150,7 @@
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-desktop"></i> <span>Tourdescription</span>
+                            <i class="fa fa-desktop"></i> <span>Chi tiết tour</span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="active">
@@ -232,7 +163,7 @@
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-desktop"></i> <span>Tourtype</span>
+                            <i class="fa fa-desktop"></i> <span>Loại tour</span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="active">
@@ -245,7 +176,7 @@
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-desktop"></i> <span>User</span>
+                            <i class="fa fa-desktop"></i> <span>Người dùng</span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="active">
@@ -261,28 +192,21 @@
             <!-- /.sidebar -->
         </aside>
 
-            <!-- Content Wrapper. Contains page content -->
-            <div class="content-wrapper">
-                <!-- Main content -->
-                <section class="content">
-                    <?php                    
-                    if(isset($_view) && $_view)
-                        $this->load->view($_view);
-                    ?>                    
-                </section>
-                <!-- /.content -->
-            </div>
-            <!-- /.content-wrapper -->
-            <!-- Control Sidebar -->
-            <aside class="control-sidebar control-sidebar-dark">
-                <!-- Create the tabs -->
-                <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-                    
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <!-- Home tab content -->
-                    <div class="tab-pane" id="control-sidebar-home-tab">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Main content -->
+            <section class="content">
+                <?php
+                if (isset($_view) && $_view)
+                    $this->load->view($_view);
+                ?>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
 
             </ul>
             <!-- Tab panes -->
