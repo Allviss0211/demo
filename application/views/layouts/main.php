@@ -49,14 +49,14 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="https://i.ibb.co/bd3TR85/93873276-892093347905185-1182473014202073088-n.jpg" class="user-image" alt="User Image">
-                                <span class="hidden-xs"> <?php echo $_SESSION['lgFullname'] ?> </span>
+                                <span class="hidden-xs"> <?php echo $_SESSION['lgFullname'] ?? "<strong style='color:red'> NotLogin </strong>" ?> </span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
                                     <img src="<?php echo site_url('/resources/img/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
                                     <p>
-                                    <?php echo $_SESSION['lgFullname'] ?>
+                                    <?php echo $_SESSION['lgFullname'] ?? "<strong style='color:red'> NotLogin </strong>" ?>
                                     </p>
                                 </li>
                                 <!-- Menu Footer-->
@@ -84,7 +84,7 @@
                         <img src="<?php echo site_url('resources/img/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                        <p><?php echo $_SESSION['lgFullname'] ?></p>
+                        <p><?php echo $_SESSION['lgFullname'] ?? "<strong style='color:red'> NotLogin </strong>" ?></p>
                         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>
                 </div>

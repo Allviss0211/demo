@@ -11,7 +11,7 @@
                 <table class="table table-striped">
                     <tr>
 						<!-- <th>IdDesciption</th> -->
-						<th>Tên tour</th>
+						<th>Tên Tour</th>
 						<th>Timeline</th>
 						<th>Giới thiệu</th>
 						<th>Hình ảnh</th>
