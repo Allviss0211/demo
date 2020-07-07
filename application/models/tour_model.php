@@ -35,7 +35,7 @@ class Tour_model extends CI_Model
         $this->db->select('IdTour, tour.Name as NameTour, tourtype.Name as NameTourType, Schedule, Start, NoDay, NoNight, Vehicle, Hotel, NoTicket, Price, tour.Note');
         $this->db->from('tour');
         $this->db->join('tourtype', 'tour.IdTourType = tourtype.IdTourType');
-        $this->db->order_by('IdTour', 'asc');
+        $this->db->order_by('tourtype.IdTourType', 'asc');
         return $this->db->get()->result_array();
     }
         

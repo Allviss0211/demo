@@ -10,7 +10,7 @@
     <meta name="description" content="">
 
 
-    <title>Home</title>
+    <title><?php echo $title; ?></title>
     <link rel="stylesheet" href="../assets/web/assets/thw-icons-bold/thw-icons-bold.css">
     <link rel="stylesheet" href="../assets/web/assets/thw-icons/thw-icons.css">
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
@@ -52,9 +52,9 @@
                     </li>
                     <li class="nav-item">
                         <?php
-                        if (isset($_SESSION["isLogin"])) {
+                        if (isset($_SESSION["isLogin"])) { 
                             if (isset($_SESSION["lgRole"]) && $_SESSION["lgRole"] == 1) { ?>
-                                <a class="nav-link link text-primary display-4" href="dashboard?id=<?php echo $_SESSION['lgIdUser'] ?>"><span class="thwib-info thw-iconfont thw-iconfont-btn">
+                                <a class="nav-link link text-primary display-4" href="<?= base_url("dashboard?id={$_SESSION['lgIdUser']}") ?>"><span class="thwib-info thw-iconfont thw-iconfont-btn">
                                     </span><?php echo $_SESSION["lgFullname"] ?> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                                 </a>
                             <?php } else { ?>
@@ -73,9 +73,9 @@
                         <a class="nav-link link text-primary display-4" href="<?= base_url("home") ?>"><span class="thwib-home thw-iconfont thw-iconfont-btn"></span>Trang chủ &nbsp; &nbsp; &nbsp;
                             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="page3.html"><span class="thwib-gift thw-iconfont thw-iconfont-btn"></span>Sự kiện &nbsp; &nbsp; &nbsp;
+                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="<?= base_url("tour/event") ?>"><span class="thwib-gift thw-iconfont thw-iconfont-btn"></span>Sự kiện &nbsp; &nbsp; &nbsp;
                             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li>
-                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="page1.html"><span class="thwib-contact-form thw-iconfont thw-iconfont-btn"></span>
+                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="<?= base_url("home") ?>"><span class="thwib-contact-form thw-iconfont thw-iconfont-btn"></span>
                             Giới thiệu &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
                 </ul>
 
