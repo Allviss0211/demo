@@ -10,6 +10,7 @@ class User extends CI_Controller
     {
         parent::__construct();
         $this->load->model('User_model');
+        $this->load->model('Decentralization_model');
     }
 
     /*
@@ -45,6 +46,7 @@ class User extends CI_Controller
             $user_id = $this->User_model->add_user($params);
             redirect('user/index');
         } else {
+            $data['decentralization'] = $this->Decentralization_model->get_all_decentralization();
             $data['_view'] = 'user/add';
             $this->load->view('layouts/main', $data);
         }
@@ -76,6 +78,7 @@ class User extends CI_Controller
                 $this->User_model->update_user($IdUser, $params);
                 redirect('user/index');
             } else {
+                $data['decentralization'] = $this->Decentralization_model->get_all_decentralization();
                 $data['_view'] = 'user/edit';
                 $this->load->view('layouts/main', $data);
             }

@@ -64,12 +64,15 @@
 					<div class="col-md-6">
 						<label for="IdTourType" class="control-label">Loại Tour</label>
 						<div class="form-group">
-							<!-- <input type="select" name="IdTourType" value="<?php echo $this->input->post('IdTourType'); ?>" class="form-control" id="IdTourType" /> -->
 							<select name="IdTourType" id="IdTourType" class="form-control"><option value="0">Chọn loại Tour</option><?php
 							foreach($tourtype as $t)
-							{?>
-								<option value="<?php echo $t["IdTourType"]; ?>"><?php echo $t["Name"]?></option>;
-							<?php }
+							{
+								if($tour['IdTourType'] === $t['IdTourType']) {
+									echo "<option value={$t["IdTourType"]} selected>{$t["Name"]}</option>";
+								}
+								else 
+									echo "<option value={$t["IdTourType"]}>{$t["Name"]}</option>";
+							}
 							?></select>
 						</div>
 					</div>

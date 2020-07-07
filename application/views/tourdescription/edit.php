@@ -22,7 +22,7 @@
 					<div class="col-md-6">
 						<label for="Image" class="control-label">Hình ảnh</label>
 						<div class="form-group">
-							<input type="text" name="Image" value="<?php echo ($this->input->post('Image') ? $this->input->post('Image') : $tourdescription['Image']); ?>" class="form-control" id="Image" />
+						<input type="file" name="Image" value="<?php echo $this->input->post('Image'); ?>" class="form-control" id="Image" />
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -30,10 +30,13 @@
 						<div class="form-group">
 							<select name="IdTour" id="IdTour" class="form-control">
 								<option value="0">Chọn tour</option>
-								<?php foreach ($tour as $t) { ?>
-									<option value="<?php echo $t['IdTour']; ?>"><?php echo $t["NameTour"] ?></option>;
-								<?php }
-								?>
+								<?php foreach ($tour as $t) {
+									if($tourdescription['IdTour'] === $t['IdTour']) {
+										echo "<option value='{$t['IdTour']}' selected>{$t["NameTour"]}</option>";
+									}
+									else 
+										echo "<option value='{$t['IdTour']}'>{$t["NameTour"]}</option>";
+								} ?>
 							</select>
 						</div>
 					</div>
