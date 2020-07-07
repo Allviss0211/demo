@@ -19,7 +19,9 @@ class Decentralization extends CI_Controller{
         $data['decentralization'] = $this->Decentralization_model->get_all_decentralization();
         
         $data['_view'] = 'decentralization/index';
+
         $this->load->view('layouts/main',$data);
+        
     }
 
     /*

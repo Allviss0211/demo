@@ -2,7 +2,7 @@
     <div class="col-md-12">
       	<div class="box box-info">
             <div class="box-header with-border">
-              	<h3 class="box-title">Tour Add</h3>
+              	<h3 class="box-title">Thêm Tour</h3>
             </div>
             <?php echo form_open('tour/add'); ?>
           	<div class="box-body">
@@ -62,10 +62,10 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="IdTourType" class="control-label">Hình thức tour</label>
+						<label for="IdTourType" class="control-label">Loại Tour</label>
 						<div class="form-group">
 							<!-- <input type="select" name="IdTourType" value="<?php echo $this->input->post('IdTourType'); ?>" class="form-control" id="IdTourType" /> -->
-							<select name="IdTourType" id="IdTourType" class="form-control"><option value="0">Chọn loại tour</option><?php
+							<select name="IdTourType" id="IdTourType" class="form-control"><option value="0">Chọn loại Tour</option><?php
 							foreach($tourtype as $t)
 							{?>
 								<option value="<?php echo $t["IdTourType"]; ?>"><?php echo $t["Name"]?></option>;
@@ -83,7 +83,7 @@
 			</div>
           	<div class="box-footer">
             	<button type="submit" class="btn btn-success">
-            		<i class="fa fa-check"></i> Save
+            		<i class="fa fa-check"></i> Lưu
             	</button>
           	</div>
             <?php echo form_close(); ?>

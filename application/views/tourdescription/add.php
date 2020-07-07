@@ -1,12 +1,12 @@
 <div class="row">
-    <div class="col-md-12">
-      	<div class="box box-info">
-            <div class="box-header with-border">
-              	<h3 class="box-title">Tourdescription Add</h3>
-            </div>
-            <?php echo form_open('tourdescription/add'); ?>
-          	<div class="box-body">
-          		<div class="row clearfix">
+	<div class="col-md-12">
+		<div class="box box-info">
+			<div class="box-header with-border">
+				<h3 class="box-title">Thêm chi tiết Tour</h3>
+			</div>
+			<?php echo form_open('tourdescription/add'); ?>
+			<div class="box-body">
+				<div class="row clearfix">
 					<div class="col-md-6">
 						<label for="Description" class="control-label">Giới thiệu</label>
 						<div class="form-group">
@@ -20,20 +20,21 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="Image" class="control-label">Hình ảnh</label>
+						<label for="IdTour" class="control-label">Tên tour</label>
 						<div class="form-group">
-							<input type="file" name="Image" value="<?php echo $this->input->post('Image'); ?>" class="form-control" id="Image" />
+							<select name="IdTour" id="IdTour" class="form-control">
+								<option value="0">Chọn tour</option>
+								<?php foreach ($tour as $t) { ?>
+									<option value="<?php echo $t['IdTour']; ?>"><?php echo $t["NameTour"] ?></option>;
+								<?php }
+								?>
+							</select>
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="IdTour" class="control-label">Tên tour</label>
+						<label for="Image" class="control-label">Hình ảnh</label>
 						<div class="form-group">
-						<select name="IdTour" id="IdTour" class="form-control"><option value="0">Chọn tour</option><?php
-							foreach($tour as $t)
-							{?>
-								<option value="<?php echo $t['IdTour']; ?>"><?php echo $t["Name"]?></option>;
-							<?php }
-							?></select>
+						<input type="file" name="Image" value="<?php echo $this->input->post('Image'); ?>" class="form-control" id="Image" />
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -44,12 +45,12 @@
 					</div>
 				</div>
 			</div>
-          	<div class="box-footer">
-            	<button type="submit" class="btn btn-success">
-            		<i class="fa fa-check"></i> Save
-            	</button>
-          	</div>
-            <?php echo form_close(); ?>
-      	</div>
-    </div>
+			<div class="box-footer">
+				<button type="submit" class="btn btn-success">
+					<i class="fa fa-check"></i> Lưu
+				</button>
+			</div>
+			<?php echo form_close(); ?>
+		</div>
+	</div>
 </div>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>qldulich</title>
+        <title>THW</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.6 -->
@@ -13,7 +13,7 @@
         <!-- Ionicons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
         <!-- Datetimepicker -->
-        <link rel="stylesheet" href="<?php echo site_url('../resources/css/bootstrap-datetimepicker.min.css');?>">
+        <link rel="stylesheet" href="<?php echo site_url('/resources/css/bootstrap-datetimepicker.min.css');?>">
         <!-- Theme style -->
         <link rel="stylesheet" href="<?php echo site_url('/resources/css/AdminLTE.min.css');?>">
         <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -27,9 +27,9 @@
                 <!-- Logo -->
                 <a href="" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini">qldulich</span>
+                    <span class="logo-mini">THW</span>
                     <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg">qldulich</span>
+                    <span class="logo-lg">THW</span>
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top">
@@ -47,7 +47,7 @@
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <img src="https://i.ibb.co/bd3TR85/93873276-892093347905185-1182473014202073088-n.jpg" class="user-image" alt="User Image">
-                                    <span class="hidden-xs">Alexander Pierce</span>
+                                    <span class="hidden-xs">Võ Minh Quốc Việt</span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
@@ -55,8 +55,8 @@
                                         <img src="<?php echo site_url('/resources/img/user2-160x160.jpg');?>" class="img-circle" alt="User Image">
 
                                     <p>
-                                        Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2012</small>
+                                        Võ Minh Quốc Việt
+                                        <small>CEO Tourist Half Way</small>
                                     </p>
                                     </li>
                                     <!-- Menu Footer-->
@@ -65,7 +65,7 @@
                                             <a href="#" class="btn btn-default btn-flat">Profile</a>
                                         </div>
                                         <div class="pull-right">
-                                            <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                            <a href="#" class="btn btn-default btn-flat">Đăng xuất</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -84,13 +84,13 @@
                             <img src="<?php echo site_url('resources/img/user2-160x160.jpg');?>" class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
-                            <p>Alexander Pierce</p>
-                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                            <p>Võ Minh Quốc Việt</p>
+                            <a href="#"><i class="fa fa-circle text-success"></i>Online</a>
                         </div>
                     </div>
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li class="header">MAIN NAVIGATION</li>
+                        <li class="header">MENU</li>
                         <li>
                             <a href="<?php echo site_url();?>">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
@@ -98,40 +98,40 @@
                         </li>
 						<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Bill</span>
+                                <i class="fa fa-desktop"></i> <span>Hóa đơn</span>
                             </a>
                             <ul class="treeview-menu">
 								<li class="active">
-                                    <a href="<?php echo site_url('bill/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php echo site_url('bill/add');?>"><i class="fa fa-plus"></i> Thêm</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('bill/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php echo site_url('bill/index');?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                                 </li>
 							</ul>
                         </li>
 						<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Billinfo</span>
+                                <i class="fa fa-desktop"></i> <span>Thông tin hóa đơn</span>
                             </a>
                             <ul class="treeview-menu">
 								<li class="active">
-                                    <a href="<?php echo site_url('billinfo/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php echo site_url('billinfo/add');?>"><i class="fa fa-plus"></i> Thêm</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('billinfo/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php echo site_url('billinfo/index');?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                                 </li>
 							</ul>
                         </li>
 						<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Decentralization</span>
+                                <i class="fa fa-desktop"></i> <span>Phân quyền</span>
                             </a>
                             <ul class="treeview-menu">
 								<li class="active">
-                                    <a href="<?php echo site_url('decentralization/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php echo site_url('decentralization/add');?>"><i class="fa fa-plus"></i> Thêm</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('decentralization/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php echo site_url('decentralization/index');?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                                 </li>
 							</ul>
                         </li>
@@ -141,49 +141,49 @@
                             </a>
                             <ul class="treeview-menu">
 								<li class="active">
-                                    <a href="<?php echo site_url('tour/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php echo site_url('tour/add');?>"><i class="fa fa-plus"></i> Thêm</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('tour/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php echo site_url('tour/index');?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                                 </li>
 							</ul>
                         </li>
 						<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Tourdescription</span>
+                                <i class="fa fa-desktop"></i> <span>Chi tiết Tour</span>
                             </a>
                             <ul class="treeview-menu">
 								<li class="active">
-                                    <a href="<?php echo site_url('tourdescription/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php echo site_url('tourdescription/add');?>"><i class="fa fa-plus"></i> Thêm</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('tourdescription/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php echo site_url('tourdescription/index');?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                                 </li>
 							</ul>
                         </li>
 						<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Tourtype</span>
+                                <i class="fa fa-desktop"></i> <span>Hình thức Tour</span>
                             </a>
                             <ul class="treeview-menu">
 								<li class="active">
-                                    <a href="<?php echo site_url('tourtype/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php echo site_url('tourtype/add');?>"><i class="fa fa-plus"></i> Thêm</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('tourtype/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php echo site_url('tourtype/index');?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                                 </li>
 							</ul>
                         </li>
 						<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>User</span>
+                                <i class="fa fa-desktop"></i> <span>Người dùng</span>
                             </a>
                             <ul class="treeview-menu">
 								<li class="active">
-                                    <a href="<?php echo site_url('user/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php echo site_url('user/add');?>"><i class="fa fa-plus"></i> Thêm</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('user/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php echo site_url('user/index');?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                                 </li>
 							</ul>
                         </li>
@@ -204,10 +204,6 @@
                 <!-- /.content -->
             </div>
             <!-- /.content-wrapper -->
-            <footer class="main-footer">
-                <strong>Generated By <a href="http://www.crudigniter.com/">CRUDigniter</a> 3.2</strong>
-            </footer>
-
             <!-- Control Sidebar -->
             <aside class="control-sidebar control-sidebar-dark">
                 <!-- Create the tabs -->

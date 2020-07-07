@@ -10,7 +10,7 @@ class Decentralization_model extends CI_Model
     {
         parent::__construct();
     }
-    
+
     /*
      * Get decentralization by IdDecentralization
      */

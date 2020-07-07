@@ -18,7 +18,7 @@ class Tour extends CI_Controller{
     function index()
     {
         $data['tour'] = $this->Tour_model->get_all_tour();
-        $data['tourtype'] = $this->Tourtype_model->get_all_tourtype();
+
         $data['_view'] = 'tour/index';
         $this->load->view('layouts/main',$data);
     }

@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">User Listing</h3>
+                <h3 class="box-title">Danh sách người dùng</h3>
             	<div class="box-tools">
                     <a href="<?php echo site_url('user/add'); ?>" class="btn btn-success btn-sm">Thêm</a> 
                 </div>
@@ -10,7 +10,7 @@
             <div class="box-body">
                 <table class="table table-striped">
                     <tr>
-						<th>Mã số</th>
+						<!-- <th>Mã số</th> -->
 						<th>Tài khoản</th>
 						<th>Mật khẩu</th>
 						<th>Vai trò</th>
@@ -25,10 +25,10 @@
                     </tr>
                     <?php foreach($user as $u){ ?>
                     <tr>
-						<td><?php echo $u['IdUser']; ?></td>
+						<!-- <td><?php echo $u['IdUser']; ?></td> -->
 						<td><?php echo $u['Username']; ?></td>
 						<td><?php echo $u['Password']; ?></td>
-						<td><?php echo $u['IdDecentralization']; ?></td>
+						<td><?php echo $u['Name']; ?></td>
 						<td><?php echo $u['Fullname']; ?></td>
 						<td><?php echo $u['IdentityCard']; ?></td>
 						<td><?php echo $u['Birthday']; ?></td>

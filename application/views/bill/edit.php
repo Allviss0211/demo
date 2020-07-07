@@ -2,15 +2,15 @@
     <div class="col-md-12">
       	<div class="box box-info">
             <div class="box-header with-border">
-              	<h3 class="box-title">Bill Edit</h3>
+              	<h3 class="box-title">Chỉnh sửa hóa đơn</h3>
             </div>
 			<?php echo form_open('bill/edit/'.$bill['IdBill']); ?>
 			<div class="box-body">
 				<div class="row clearfix">
 					<div class="col-md-6">
-						<label for="OrderDate" class="control-label">OrderDate</label>
+						<label for="OrderDate" class="control-label">Ngày đặt vé</label>
 						<div class="form-group">
-							<input type="text" name="OrderDate" value="<?php echo ($this->input->post('OrderDate') ? $this->input->post('OrderDate') : $bill['OrderDate']); ?>" class="has-datepicker form-control" id="OrderDate" />
+							<input type="date" name="OrderDate" value="<?php echo ($this->input->post('OrderDate') ? $this->input->post('OrderDate') : $bill['OrderDate']); ?>" class="form-control" id="OrderDate" />
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -71,7 +71,7 @@
 			</div>
 			<div class="box-footer">
             	<button type="submit" class="btn btn-success">
-					<i class="fa fa-check"></i> Save
+					<i class="fa fa-check"></i> Lưu
 				</button>
 	        </div>				
 			<?php echo form_close(); ?>

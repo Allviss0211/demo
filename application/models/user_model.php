@@ -24,8 +24,11 @@ class User_model extends CI_Model
      */
     function get_all_user()
     {
+        $this->db->select('*');
+        $this->db->from('user');
+        $this->db->join('decentralization', 'user.IdDecentralization = decentralization.IdDecentralization');
         $this->db->order_by('IdUser', 'asc');
-        return $this->db->get('user')->result_array();
+        return $this->db->get()->result_array();
     }
         
     /*

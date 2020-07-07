@@ -24,8 +24,11 @@ class Tourdescription_model extends CI_Model
      */
     function get_all_tourdescription()
     {
-        $this->db->order_by('IdDesciption', 'asc');
-        return $this->db->get('tourdescription')->result_array();
+        $this->db->select('IdDesciption, tour.Name, Timeline, Description, Image, tourdescription.Note');
+        $this->db->from('tourdescription');
+        $this->db->join('tour', 'tour.IdTour = tourdescription.IdTour');
+        $this->db->order_by('tour.Name', 'asc');
+        return $this->db->get()->result_array();
     }
         
     /*

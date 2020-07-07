@@ -2,13 +2,13 @@
     <div class="col-md-12">
       	<div class="box box-info">
             <div class="box-header with-border">
-              	<h3 class="box-title">Tourdescription Edit</h3>
+              	<h3 class="box-title">Chỉnh sửa chi tiết Tour</h3>
             </div>
 			<?php echo form_open('tourdescription/edit/'.$tourdescription['IdDesciption']); ?>
 			<div class="box-body">
 				<div class="row clearfix">
 					<div class="col-md-6">
-						<label for="Description" class="control-label">Description</label>
+						<label for="Description" class="control-label">Giới thiệu</label>
 						<div class="form-group">
 							<input type="text" name="Description" value="<?php echo ($this->input->post('Description') ? $this->input->post('Description') : $tourdescription['Description']); ?>" class="form-control" id="Description" />
 						</div>
@@ -20,19 +20,25 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="Image" class="control-label">Image</label>
+						<label for="Image" class="control-label">Hình ảnh</label>
 						<div class="form-group">
 							<input type="text" name="Image" value="<?php echo ($this->input->post('Image') ? $this->input->post('Image') : $tourdescription['Image']); ?>" class="form-control" id="Image" />
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="IdTour" class="control-label">IdTour</label>
+						<label for="IdTour" class="control-label">Tên tour</label>
 						<div class="form-group">
-							<input type="text" name="IdTour" value="<?php echo ($this->input->post('IdTour') ? $this->input->post('IdTour') : $tourdescription['IdTour']); ?>" class="form-control" id="IdTour" />
+							<select name="IdTour" id="IdTour" class="form-control">
+								<option value="0">Chọn tour</option>
+								<?php foreach ($tour as $t) { ?>
+									<option value="<?php echo $t['IdTour']; ?>"><?php echo $t["NameTour"] ?></option>;
+								<?php }
+								?>
+							</select>
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="Note" class="control-label">Note</label>
+						<label for="Note" class="control-label">Ghi chú</label>
 						<div class="form-group">
 							<input type="text" name="Note" value="<?php echo ($this->input->post('Note') ? $this->input->post('Note') : $tourdescription['Note']); ?>" class="form-control" id="Note" />
 						</div>
@@ -41,7 +47,7 @@
 			</div>
 			<div class="box-footer">
             	<button type="submit" class="btn btn-success">
-					<i class="fa fa-check"></i> Save
+					<i class="fa fa-check"></i> Lưu
 				</button>
 	        </div>				
 			<?php echo form_close(); ?>
