@@ -10,7 +10,7 @@
             <div class="box-body">
                 <table class="table table-striped">
                     <tr>
-						<th>Mã chi tiết</th>
+						<th>ID chi tiết</th>
 						<th>ID hóa đơn</th>
 						<th>Số người lớn</th>
 						<th>Số trẻ em</th>
