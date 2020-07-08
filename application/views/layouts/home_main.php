@@ -58,8 +58,8 @@
                                     </span><?php echo $_SESSION["lgFullname"] ?> &nbsp; &nbsp; &nbsp;&nbsp;
                                 </a>
                             <?php } else { ?>
-                                <a class="nav-link link text-primary display-4" href="<?php base_url("user/edit_user") ?>"><span class="thwib-info thw-iconfont thw-iconfont-btn">
-                                    </span><?php echo "user: " . $_SESSION["lgFullname"] ?>&nbsp; &nbsp; &nbsp;&nbsp;
+                                <a class="nav-link link text-primary display-4" href="<?= base_url("user/edit_user/{$_SESSION['lgIdUser']}") ?>"><span class="thwib-info thw-iconfont thw-iconfont-btn">
+                                    </span><?php echo "user: ".$_SESSION["lgFullname"] ?>&nbsp; &nbsp; &nbsp;&nbsp;
                                 </a>
                             <?php }
                         } else { ?>
