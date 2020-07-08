@@ -13,7 +13,7 @@
                 </h3>
             </div>
             <div class="media-container-column col-12 col-lg-3 col-md-4">
-                <div class="thw-section-btn align-right py-4"><a class="btn btn-danger display-4" href="<?= site_url("tourdescription/detail?id=$tour[IdTour]") ?>"><?php echo number_format("$tour[Price]")."đ" ?></a></div>
+                <div class="thw-section-btn align-right py-4"><a class="btn btn-danger display-4" href="<?= site_url("cart?id=$tour[IdTour]") ?>"><?php echo number_format("$tour[Price]")."đ" ?></a></div>
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="thw-figure m-auto" style="width: 50%;">
-                <img src="../assets/images/hoian-982x574.jpg" alt="thw" title="">
+                <img src="/resources/images/hoian-982x574.jpg" alt="thw" title="">
             </div>
             <div class="block-content align-left">
                 <div class="card pl-3 pr-3">
@@ -81,7 +81,7 @@
                 <div class="card col-12 col-md-6 p-3 col-lg-3">
                     <div class="card-wrapper">
                         <div class="card-img">
-                            <a href="page7.html"><img src="../assets/images/tn-506x296.jpg" alt="thw" title=""></a>
+                            <a href="<?= site_url("tourdescription/detail?id=$tt[IdTour]") ?>"><img src="/resources/images/tn-506x296.jpg" alt="thw" title=""></a>
                         </div>
                         <div class="card-box">
                             <h4 class="card-title thw-fonts-style display-5"><a href="<?= site_url("tourdescription/detail?id=$tt[IdTour]") ?>" class="text-danger"><?= $tt['Name'] ?>
