@@ -69,7 +69,7 @@
 
                         <div data-for="Total" class="col-md-6 form-group">
                             <label for="total-form1-67" class="form-control-label thw-fonts-style display-7">Tổng tiền</label>
-                            <input type="text" value="<?= number_format($tour['Price']) ?? '' ?>" name="total" readonly="readonly" data-form-field="Total" class="form-control display-7" id="total-form1-67"></input>
+                            <input type="text" value="<?= number_format($tour['Price']) ?? '' ?>" id='total' name="total" readonly="readonly" data-form-field="Total" class="form-control display-7" id="total-form1-67"></input>
                         </div>
                         <script>
                             function onChange() {
@@ -78,7 +78,9 @@
                                 $children = document.getElementById("amountChildren").value;
                                 $method = document.getElementById("method").value;
                                 $pay = ($price * $adult + $price * $children * 70 / 100) * $method / 100;
-                                document.getElementById("pay").value = Intl.NumberFormat('en-US').format($pay);
+                                $total = ($price * $adult + $price * $children * 70 / 100);
+                                document.getElementById("pay").value = Intl.NumberFormat('en-US').format($pay)
+                                document.getElementById("total").value = Intl.NumberFormat('en-US').format($total)
                             }
                         </script>
                         <div data-for="Pay" class="col-md-6 form-group">
