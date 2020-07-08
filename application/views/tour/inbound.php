@@ -29,7 +29,7 @@
                             <a href="page5.html"><img src="../assets/images/pq-696x407.jpg" alt="thw" title=""></a>
                         </div>
                         <div class="card-box">
-                            <h4 class="card-title thw-fonts-style display-5"><a href="page5.html" class="text-danger"><?php echo $t['Name'];
+                            <h4 class="card-title thw-fonts-style display-5"><a href="<?= site_url("tourdescription/detail?id=$t[IdTour]") ?>" class="text-danger"><?php echo $t['Name'];
                                                                                                                         if ($t['Note'] != '') {
                                                                                                                             echo ' - ';
                                                                                                                             echo $t['Note'];
@@ -41,7 +41,7 @@
                                 <br><strong>Phương tiện</strong>: <?php echo $t['Vehicle'] ?>
                                 <br><strong>Khách sạn</strong>: <?php echo $t['Hotel'] ?><br><br></p>
                             <!--Btn-->
-                            <div class="thw-section-btn align-left"><a href="page5.html" class="btn btn-danger-outline display-4"><?php echo $t['Price'] ?></a></div>
+                            <div class="thw-section-btn align-left"><a href="<?= site_url("tourdescription/detail?id=$t[IdTour]") ?>" class="btn btn-danger-outline display-4"><?php echo number_format("$t[Price]")."đ" ?></a></div>
                         </div>
                     </div>
                 </div>

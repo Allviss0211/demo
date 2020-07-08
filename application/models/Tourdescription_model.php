@@ -23,7 +23,12 @@ class Tourdescription_model extends CI_Model
      */
     function get_tourdescription_by_IdTour($IdTour)
     {
-        return $this->db->get_where('tourdescription',array('IdTour'=>$IdTour))->result_array();
+        $this->db->select('IdDesciption, tour.Name, Timeline, Description, Image, tourdescription.Note');
+        $this->db->from('tourdescription');
+        $this->db->join('tour', 'tour.IdTour = tourdescription.IdTour');
+        $this->db->where('tour.IdTOur', $IdTour);
+        $this->db->order_by('tour.Name', 'asc');
+        return $this->db->get()->result_array();
     }    
     /*
      * Get all tourdescription
