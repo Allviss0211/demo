@@ -1,6 +1,6 @@
 @charset "UTF-8";
 section {
-  background-color: #eeeeee;
+  background-color: #ffffff;
 }
 
 body {
@@ -793,7 +793,7 @@ blockquote {
 }
 
 .justify-content-center {
-  -webkit-justify-content: center;
+  -webkit-justify-content: flex-start;
 }
 
 .form-inline {

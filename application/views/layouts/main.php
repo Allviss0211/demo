@@ -90,7 +90,7 @@
                 </div>
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu">
-                    <li class="header">MAIN NAVIGATION</li>
+                    <li class="header">MENU</li>
                     <li>
                         <a href="<?php echo site_url('dashboard'); ?>">
                             <i class="fa fa-dashboard"></i> <span>Bảng điều khiển</span>
@@ -102,88 +102,88 @@
                         </a>
                         <ul class="treeview-menu">
                             <li class="active">
-                                <a href="<?php echo site_url('bill/add'); ?>"><i class="fa fa-plus"></i> Add</a>
+                                <a href="<?php echo site_url('bill/add'); ?>"><i class="fa fa-plus"></i> Thêm</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('bill/index'); ?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <a href="<?php echo site_url('bill/index'); ?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-desktop"></i> <span>Thông tin hóa đơn</span>
+                            <i class="fa fa-file"></i> <span>Thông tin hóa đơn</span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="active">
-                                <a href="<?php echo site_url('billinfo/add'); ?>"><i class="fa fa-plus"></i> Add</a>
+                                <a href="<?php echo site_url('billinfo/add'); ?>"><i class="fa fa-plus"></i> Thêm</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('billinfo/index'); ?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <a href="<?php echo site_url('billinfo/index'); ?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-desktop"></i> <span>Phân quyền</span>
+                            <i class="fa fa-group"></i> <span>Phân quyền</span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="active">
-                                <a href="<?php echo site_url('decentralization/add'); ?>"><i class="fa fa-plus"></i> Add</a>
+                                <a href="<?php echo site_url('decentralization/add'); ?>"><i class="fa fa-plus"></i> Thêm</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('decentralization/index'); ?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <a href="<?php echo site_url('decentralization/index'); ?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-desktop"></i> <span>Tour</span>
+                            <i class="fa fa-globe"></i> <span>Tour</span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="active">
-                                <a href="<?php echo site_url('tour/add'); ?>"><i class="fa fa-plus"></i> Add</a>
+                                <a href="<?php echo site_url('tour/add'); ?>"><i class="fa fa-plus"></i> Thêm</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('tour/index'); ?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <a href="<?php echo site_url('tour/index'); ?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-desktop"></i> <span>Chi tiết tour</span>
+                            <i class="fa fa-info-circle"></i> <span>Chi tiết tour</span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="active">
-                                <a href="<?php echo site_url('tourdescription/add'); ?>"><i class="fa fa-plus"></i> Add</a>
+                                <a href="<?php echo site_url('tourdescription/add'); ?>"><i class="fa fa-plus"></i> Thêm</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('tourdescription/index'); ?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <a href="<?php echo site_url('tourdescription/index'); ?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-desktop"></i> <span>Loại tour</span>
+                            <i class="fa fa-list-alt" aria-hidden="true"></i> <span>Loại tour</span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="active">
-                                <a href="<?php echo site_url('tourtype/add'); ?>"><i class="fa fa-plus"></i> Add</a>
+                                <a href="<?php echo site_url('tourtype/add'); ?>"><i class="fa fa-plus"></i> Thêm</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('tourtype/index'); ?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <a href="<?php echo site_url('tourtype/index'); ?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-desktop"></i> <span>Người dùng</span>
+                            <i class="fa fa-user-circle"></i> <span>Người dùng</span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="active">
-                                <a href="<?php echo site_url('user/add'); ?>"><i class="fa fa-plus"></i> Add</a>
+                                <a href="<?php echo site_url('user/add'); ?>"><i class="fa fa-plus"></i> Thêm</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('user/index'); ?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <a href="<?php echo site_url('user/index'); ?>"><i class="fa fa-list-ul"></i> Danh sách</a>
                             </li>
                         </ul>
                     </li>
