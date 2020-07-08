@@ -6,22 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="generator" content="thw v4.12.3, index.html">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="shortcut icon" href="../assets/images/101924093-246119703475650-424695557458493440-n-1-122x99.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/resources/images/101924093-246119703475650-424695557458493440-n-1-122x99.png" type="image/x-icon">
     <meta name="description" content="">
 
 
     <title><?php echo $title ?></title>
-    <link rel="stylesheet" href="../assets/web/assets/thw-icons-bold/thw-icons-bold.css">
-    <link rel="stylesheet" href="../assets/web/assets/thw-icons/thw-icons.css">
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="../assets/tether/tether.min.css">
-    <link rel="stylesheet" href="../assets/dropdown/css/style.css">
-    <link rel="stylesheet" href="../assets/socicon/css/styles.css">
-    <link rel="stylesheet" href="../assets/theme/css/style.css">
-    <link rel="preload" as="style" href="../assets/thw/css/thw-additional.css">
-    <link rel="stylesheet" href="../assets/thw/css/thw-additional.css" type="text/css">
+    <link rel="stylesheet" href="/resources/web/assets/thw-icons-bold/thw-icons-bold.css">
+    <link rel="stylesheet" href="/resources/web/assets/thw-icons/thw-icons.css">
+    <link rel="stylesheet" href="/resources/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/resources/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/resources/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="/resources/tether/tether.min.css">
+    <link rel="stylesheet" href="/resources/dropdown/css/style.css">
+    <link rel="stylesheet" href="/resources/socicon/css/styles.css">
+    <link rel="stylesheet" href="/resources/theme/css/style.css">
+    <link rel="preload" as="style" href="/resources/thw/css/thw-additional.css">
+    <link rel="stylesheet" href="/resources/thw/css/thw-additional.css" type="text/css">
     <link rel="stylesheet" href="\resources\css\style.css">
 
 
@@ -38,7 +38,7 @@
                 <div class="navbar-brand">
                     <span class="navbar-logo">
                         <a href="<?= base_url("home") ?>">
-                            <img src="../assets/images/101924093-246119703475650-424695557458493440-n-1-122x99.png" alt="thw" title="" style="height: 3.8rem;">
+                            <img src="/resources/images/101924093-246119703475650-424695557458493440-n-1-122x99.png" alt="thw" title="" style="height: 3.8rem;">
                         </a>
                     </span>
                     <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="<?= base_url("home") ?>">Tourist Half Way</a></span>
@@ -63,7 +63,7 @@
                                 </a>
                             <?php }
                         } else { ?>
-                            <a class="nav-link link text-primary display-4" href="user/login"><span class="thwib-lock thw-iconfont thw-iconfont-btn">
+                            <a class="nav-link link text-primary display-4" href="<?= base_url("user/login") ?>"><span class="thwib-lock thw-iconfont thw-iconfont-btn">
                                 </span>Đăng nhập &nbsp; &nbsp; &nbsp;&nbsp;
                             </a>
                         <?php  }
@@ -100,7 +100,7 @@
                         <p class="thw-text"><strong>Địa Chỉ:</strong><br> 280 đường An Dương Vương, Phường 4, Quận 5, Thành
                             phố hồ Chí Minh.<br><br><strong>Liên hệ:</strong><br>Email:
                             touristhw@gmail.com<br>Hotline:&nbsp;0909.113.115<br>Tư vấn và đặt dịch vụ:
-                            1900.1508<br><br><strong><a href="page20.html">Góp ý về Tourist Half Way</a></strong><br></p>
+                            1900.1508<br><br><strong><a href="<?= base_url("feedback") ?>">Góp ý về Tourist Half Way</a></strong><br></p>
                     </div>
                     <div class="col-12 col-md-3 thw-fonts-style display-7">
                         <p class="thw-text">&nbsp;&nbsp;</p>

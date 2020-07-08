@@ -16,7 +16,7 @@ class Tourdescription extends CI_Controller
     {
         $data['tourdescription'] = $this->Tourdescription_model->get_all_tourdescription();
 
-        $data['_view'] = 'tourdescription';
+        $data['_view'] = 'tourdescription/index';
         $this->load->view('layouts/main', $data);
     }
 
