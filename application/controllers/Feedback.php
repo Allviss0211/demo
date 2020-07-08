@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Feedback extends CI_Controller {
+class Feedback extends CI_Controller
+{
 
 	function __construct()
 	{
@@ -10,6 +11,21 @@ class Feedback extends CI_Controller {
 
 	public function index()
 	{
+
+		if (isset($_POST['btnFeedback'])) {
+			$to = $this->input->post('email');
+			$subject = 'Cám ơn ' . $this->input->post('name') . ' đã góp ý';
+			$message = 'Cám ơn những lời góp ý chân thành của bạn. Chúng mình sẽ cố gắng hoàn thiện các vấn đề bạn quan tâm. Mong bạn vẫn tiếp tục ủng hộ Tourist Half Way nhé!!! Chúc bạn có một ngày vui vẻ!!!';
+			$feed = $this->input->post('message');
+			if ($to != '') {
+				$this->session->set_flashdata('send_feedback_success', 'Cám ơn những phản hồi của bạn. Hẹn gặp lại bạn lần sau !!!');
+				mail($to, $subject, $message);
+				mail('touristhalfway@gmail.com', 'Phản hồi của khách hàng', $feed);
+				$data['_view'] = 'feedback';
+				$data['title'] = 'Góp ý';
+				$this->load->view('layouts/home_main', $data);
+			}
+		}
 		$data['_view'] = 'feedback';
 		$data['title'] = 'Góp ý';
 		$this->load->view('layouts/home_main', $data);

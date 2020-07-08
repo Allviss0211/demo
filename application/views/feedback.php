@@ -19,12 +19,11 @@
             <div class="media-container-column col-lg-8" data-form-type="formoid">
                 <!---Formbuilder Form--->
                 <form action="" method="POST" class="thw-form form-with-styler" data-form-title="thw Form"><input type="hidden" name="email" data-form-email="true" value="6ms2MKpU2C8vQEPhhCWlRC1tTzatLZ0rBEHty79nvYpSWPyBqqdGhZL8r+vVtnnDamCLUGr2YcrGOattaS42IUAtv9BBGMlruJ4ItKWQJSW+9i0aJvuudFAKu8aetA85">
+                    <?php if(isset($_SESSION['send_feedback_success'])) { ?>
                     <div class="row">
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Cám ơn những phản
-                            hồi của bạn. Hẹn gặp lại bạn lần sau !!!</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                        </div>
+                        <div data-form-alert="" class="alert alert-success col-12 display-7"> <?php echo $_SESSION['send_feedback_success'] ?> </div>
                     </div>
+                    <?php } ?>
                     <div class="dragArea row">
                         <div class="col-md-4  form-group" data-for="name">
                             <label for="name-form1-5m" class="form-control-label thw-fonts-style display-7">Họ và
