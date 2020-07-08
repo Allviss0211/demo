@@ -55,6 +55,37 @@ class User extends CI_Controller
     /*
      * Editing a user
      */
+    function edit_user($IdUser) 
+    {
+        // check if the user exists before trying to edit it
+        $data['user'] = $this->User_model->get_user($IdUser);
+
+        if (isset($data['user']['IdUser'])) {
+            if (isset($_POST) && count($_POST) > 0) {
+                $params = array(
+                    'Username' => $this->input->post('Username'),
+                    'Password' => $this->input->post('Password'),
+                    'IdDecentralization' => $this->input->post('IdDecentralization'),
+                    'Fullname' => $this->input->post('Fullname'),
+                    'IdentityCard' => $this->input->post('IdentityCard'),
+                    'Birthday' => $this->input->post('Birthday'),
+                    'Phone' => $this->input->post('Phone'),
+                    'Email' => $this->input->post('Email'),
+                    'Address' => $this->input->post('Address'),
+                    'Note' => $this->input->post('Note'),
+                );
+
+                $this->User_model->update_user($IdUser, $params);
+                redirect('user/index');
+            } else {
+                $data['decentralization'] = $this->Decentralization_model->get_all_decentralization();
+                $data['_view'] = 'user/edit_user';
+                $this->load->view('layouts/main', $data);
+            }
+        } else
+            show_error('The user you are trying to edit does not exist.');
+    }
+
     function edit($IdUser)
     {
         // check if the user exists before trying to edit it
