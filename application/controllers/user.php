@@ -65,7 +65,6 @@ class User extends CI_Controller
                 $params = array(
                     'Username' => $this->input->post('Username'),
                     'Password' => $this->input->post('Password'),
-                    'IdDecentralization' => $this->input->post('IdDecentralization'),
                     'Fullname' => $this->input->post('Fullname'),
                     'IdentityCard' => $this->input->post('IdentityCard'),
                     'Birthday' => $this->input->post('Birthday'),
@@ -76,11 +75,12 @@ class User extends CI_Controller
                 );
 
                 $this->User_model->update_user($IdUser, $params);
-                redirect('user/index');
+                redirect("user/edit_user/$IdUser");
             } else {
                 $data['decentralization'] = $this->Decentralization_model->get_all_decentralization();
                 $data['_view'] = 'user/edit_user';
-                $this->load->view('layouts/main', $data);
+                $data['title'] = $data['user']['Fullname'];
+                $this->load->view('layouts/home_main', $data);
             }
         } else
             show_error('The user you are trying to edit does not exist.');

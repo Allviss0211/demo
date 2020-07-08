@@ -9,7 +9,6 @@
     <link rel="shortcut icon" href="/resources/images/101924093-246119703475650-424695557458493440-n-1-122x99.png" type="image/x-icon">
     <meta name="description" content="">
 
-
     <title><?php echo $title ?></title>
     <link rel="stylesheet" href="/resources/web/assets/thw-icons-bold/thw-icons-bold.css">
     <link rel="stylesheet" href="/resources/web/assets/thw-icons/thw-icons.css">
@@ -22,9 +21,9 @@
     <link rel="stylesheet" href="/resources/theme/css/style.css">
     <link rel="preload" as="style" href="/resources/thw/css/thw-additional.css">
     <link rel="stylesheet" href="/resources/thw/css/thw-additional.css" type="text/css">
-    <link rel="stylesheet" href="\resources\css\style.css">
+    <link rel="stylesheet" href="/resources/css/style.css">
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
 
 </head>
 
@@ -51,25 +50,6 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <?php
-                        if (isset($_SESSION["isLogin"])) {
-                            if (isset($_SESSION["lgRole"]) && $_SESSION["lgRole"] == 1) { ?>
-                                <a class="nav-link link text-primary display-4" href="<?= base_url("dashboard?id={$_SESSION['lgIdUser']}") ?>"><span class="thwib-info thw-iconfont thw-iconfont-btn">
-                                    </span><?php echo $_SESSION["lgFullname"] ?> &nbsp; &nbsp; &nbsp;&nbsp;
-                                </a>
-                            <?php } else { ?>
-                                <a class="nav-link link text-primary display-4" href="<?= base_url("user/edit_user/{$_SESSION['lgIdUser']}") ?>"><span class="thwib-info thw-iconfont thw-iconfont-btn">
-                                    </span><?php echo "user: ".$_SESSION["lgFullname"] ?>&nbsp; &nbsp; &nbsp;&nbsp;
-                                </a>
-                            <?php }
-                        } else { ?>
-                            <a class="nav-link link text-primary display-4" href="<?= base_url("user/login") ?>"><span class="thwib-lock thw-iconfont thw-iconfont-btn">
-                                </span>Đăng nhập &nbsp; &nbsp; &nbsp;&nbsp;
-                            </a>
-                        <?php  }
-                        ?>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link link text-primary display-4" href="<?= base_url("home") ?>">
                             <span class="thwib-home thw-iconfont thw-iconfont-btn"></span>Trang chủ &nbsp; &nbsp; &nbsp;
                             &nbsp; </a>
@@ -81,7 +61,36 @@
                     <li class="nav-item">
                         <a class="nav-link link text-primary display-4" href="<?= base_url("intro") ?>">
                             <span class="thwib-contact-form thw-iconfont thw-iconfont-btn"></span>
-                            Giới thiệu &nbsp; &nbsp; &nbsp; &nbsp</a></li>
+                            Giới thiệu &nbsp; &nbsp; &nbsp; &nbsp</a>
+                    </li>
+                    <?php
+                    if (isset($_SESSION["isLogin"])) {
+                        if (isset($_SESSION["lgRole"]) && $_SESSION["lgRole"] == 1) { ?>
+                            <li class="nav-item">
+                                <a class="nav-link link text-primary display-4" href="<?= base_url("dashboard?id={$_SESSION['lgIdUser']}") ?>"><span class="thwib-user thw-iconfont thw-iconfont-btn">
+                                    </span><?php echo $_SESSION["lgFullname"] ?> &nbsp; &nbsp; &nbsp;&nbsp;
+                                </a>
+                            </li>
+                        <?php } else { ?>
+                            <li class="nav-item">
+                                <a class="nav-link link text-primary display-4" href="<?= base_url("user/edit_user/{$_SESSION['lgIdUser']}") ?>"><span class="thwib-user thw-iconfont thw-iconfont-btn">
+                                    </span><?php echo $_SESSION["lgFullname"] ?>&nbsp; &nbsp; &nbsp;&nbsp;
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link text-primary display-4" href="<?php echo base_url('user/logout') ?>"><span class="thwib-login thw-iconfont thw-iconfont-btn">
+                                    </span> Đăng xuất &nbsp; &nbsp; &nbsp;&nbsp;
+                                </a>
+                            </li>
+                        <?php }
+                    } else { ?>
+                        <li class="nav-item">
+                            <a class="nav-link link text-primary display-4" href="<?= base_url("user/login") ?>"><span class="thwib-lock thw-iconfont thw-iconfont-btn">
+                                </span>Đăng nhập &nbsp; &nbsp; &nbsp;&nbsp;
+                            </a>
+                        </li>
+                    <?php  }
+                    ?>
                 </ul>
 
             </div>

@@ -3,6 +3,19 @@ section {
   background-color: #ffffff;
 }
 
+.description {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.label-edit-user {
+  color: aqua;
+}
+
 body {
   font-style: normal;
   line-height: 1.5;
@@ -348,7 +361,7 @@ figure[thw-media-size] {
   border-width: 2px;
   font-style: normal;
   letter-spacing: 1px;
-  margin: 0.4rem 0.8rem;
+  margin-top: 30px;
   white-space: normal;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
