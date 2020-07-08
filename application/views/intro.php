@@ -61,7 +61,7 @@
 			<div class="col-12 col-md-8">
 				<div class="media-container-row">
 					<div class="thw-figure" style="width: 60%;">
-						<img src="assets/images/thw-436x291.jpg" alt="thw" title="">
+						<img src="/resources/images/thw-436x291.jpg" alt="thw" title="">
 					</div>
 					<div class="media-content">
 						<div class="thw-section-text">
@@ -105,7 +105,7 @@
 						</div>
 					</div>
 					<div class="thw-figure" style="width: 60%;">
-						<img src="assets/images/thw-436x308.jpg" alt="thw" title="">
+						<img src="/resources/images/thw-436x308.jpg" alt="thw" title="">
 					</div>
 				</div>
 			</div>

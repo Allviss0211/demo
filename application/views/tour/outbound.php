@@ -26,7 +26,7 @@
                 <div class="card col-12 col-md-6 p-3 col-lg-4">
                     <div class="card-wrapper">
                         <div class="card-img">
-                            <a href="page5.html"><img src="../assets/images/pq-696x407.jpg" alt="thw" title=""></a>
+                            <a href="<?= site_url("tourdescription/detail?id=$t[IdTour]") ?>"><img src="/resources/images/pq-696x407.jpg" alt="thw" title=""></a>
                         </div>
                         <div class="card-box">
                             <h4 class="card-title thw-fonts-style display-5"><a href="<?= site_url("tourdescription/detail?id=$t[IdTour]") ?>" class="text-danger"><?php echo $t['Name'];

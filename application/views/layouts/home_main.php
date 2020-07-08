@@ -52,14 +52,14 @@
                     </li>
                     <li class="nav-item">
                         <?php
-                        if (isset($_SESSION["isLogin"])) { 
+                        if (isset($_SESSION["isLogin"])) {
                             if (isset($_SESSION["lgRole"]) && $_SESSION["lgRole"] == 1) { ?>
                                 <a class="nav-link link text-primary display-4" href="<?= base_url("dashboard?id={$_SESSION['lgIdUser']}") ?>"><span class="thwib-info thw-iconfont thw-iconfont-btn">
                                     </span><?php echo $_SESSION["lgFullname"] ?> &nbsp; &nbsp; &nbsp;&nbsp;
                                 </a>
                             <?php } else { ?>
                                 <a class="nav-link link text-primary display-4" href="<?php base_url("user/edit_user") ?>"><span class="thwib-info thw-iconfont thw-iconfont-btn">
-                                    </span><?php echo "user: ".$_SESSION["lgFullname"] ?>&nbsp; &nbsp; &nbsp;&nbsp;
+                                    </span><?php echo "user: " . $_SESSION["lgFullname"] ?>&nbsp; &nbsp; &nbsp;&nbsp;
                                 </a>
                             <?php }
                         } else { ?>
@@ -70,13 +70,18 @@
                         ?>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-primary display-4" href="<?= base_url("home") ?>"><span class="thwib-home thw-iconfont thw-iconfont-btn"></span>Trang chủ &nbsp; &nbsp; &nbsp;
+                        <a class="nav-link link text-primary display-4" href="<?= base_url("home") ?>">
+                            <span class="thwib-home thw-iconfont thw-iconfont-btn"></span>Trang chủ &nbsp; &nbsp; &nbsp;
                             &nbsp; </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="<?= base_url("tour/event") ?>"><span class="thwib-gift thw-iconfont thw-iconfont-btn"></span>Sự kiện &nbsp; &nbsp; &nbsp;
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li>
-                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="<?= base_url("intro") ?>"><span class="thwib-contact-form thw-iconfont thw-iconfont-btn"></span>
-                            Giới thiệu &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link link text-primary display-4" href="<?= base_url("tour/event") ?>">
+                            <span class="thwib-gift thw-iconfont thw-iconfont-btn"></span>Sự kiện &nbsp; &nbsp; &nbsp;
+                            &nbsp; </a></li>
+                    <li class="nav-item">
+                        <a class="nav-link link text-primary display-4" href="<?= base_url("intro") ?>">
+                            <span class="thwib-contact-form thw-iconfont thw-iconfont-btn"></span>
+                            Giới thiệu &nbsp; &nbsp; &nbsp; &nbsp</a></li>
                 </ul>
 
             </div>
