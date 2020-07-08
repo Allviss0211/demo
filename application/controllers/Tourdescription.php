@@ -100,3 +100,5 @@ class Tourdescription extends CI_Controller
             show_error('The tourdescription you are trying to delete does not exist.');
     }
 }
+
+?>
