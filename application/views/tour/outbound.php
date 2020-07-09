@@ -29,20 +29,28 @@
                             <a href="<?= site_url("tourdescription/detail?id=$t[IdTour]") ?>"><img src="/resources/images/pq-696x407.jpg" alt="thw" title=""></a>
                         </div>
                         <div class="card-box">
-                            <h4 class="card-title thw-fonts-style display-5"><a href="<?= site_url("tourdescription/detail?id=$t[IdTour]") ?>" class="text-danger"><?php echo $t['Name'];
-                                                                                                                        if ($t['Note'] != '') {
-                                                                                                                            echo ' - ';
-                                                                                                                            echo $t['Note'];
-                                                                                                                        }  ?></a></h4>
-                            <p class="thw-text thw-fonts-style display-7">
-                                <strong>Lịch trình</strong>: <?php echo $t['Schedule'] ?>
-                                <br><strong>Điểm khởi hành</strong>: <?php echo $t['Start'] ?>
-                                <br><strong>Thời gian</strong>: <?php echo $t['NoDay'] ?> ngày <?php echo $t['NoNight'] ?> đêm
-                                <br><strong>Phương tiện</strong>: <?php echo $t['Vehicle'] ?>
-                                <br><strong>Khách sạn</strong>: <?php echo $t['Hotel'] ?><br><br></p>
-                            <!--Btn-->
-                            <div class="thw-section-btn align-left"><a href="<?= site_url("tourdescription/detail?id=$t[IdTour]") ?>" class="btn btn-danger-outline display-4"><?php echo number_format("$t[Price]")."đ" ?></a></div>
-                        </div>
+                                <a href="<?= site_url("tourdescription/detail?id=$t[IdTour]") ?>" class="text-danger">
+                                    <h4 class="card-title thw-fonts-style display-5 description">
+                                        <?php
+                                        echo $t['Name'];
+                                        if ($t['Note'] != '') {
+                                            echo " - " . $t['Note'];
+                                        } 
+                                        ?>
+                                    </h4>
+                                </a>
+                                <p class="thw-text thw-fonts-style display-8">
+                                    <h7 class="description thw-text thw-fonts-style display-8"><strong>Lịch trình</strong>: <?php echo $t['Schedule'] ?></h7>
+                                    <h7 class="description thw-text thw-fonts-style display-8"><strong>Điểm khởi hành</strong>: <?php echo $t['Start'] ?></h7>
+                                    <h7 class="description thw-text thw-fonts-style display-8"><strong>Thời gian</strong>: <?php echo $t['NoDay'] . " ngày" ?> <?php echo $t['NoNight'] > 0 ? $t['NoNight'] . " đêm" : null ?></h7>
+                                    <h7 class="description thw-text thw-fonts-style display-8"><strong>Phương tiện</strong>: <?php echo $t['Vehicle'] ?></h7>
+                                    <h7><strong>Khách sạn</strong>: <?php echo $t['Hotel'] ?></h7>
+                                </p>
+                                <!--Btn-->
+                                <div class="thw-section-btn align-left">
+                                    <a href="<?= site_url("tourdescription/detail?id=$t[IdTour]") ?>" class="btn btn-danger-outline display-4"><?php echo number_format("$t[Price]") . "đ" ?></a>
+                                </div>
+                            </div>
                     </div>
                 </div>
 

@@ -55,6 +55,7 @@ class Tourdescription extends CI_Controller
 
             if (!$this->upload->do_upload('Image')) {
                 $error = array('upload_error' => $this->upload->display_errors());
+                $params['Image'] = "picture.png";
             } else {
                 $success = array('upload_success' => $this->upload->data());
                 $params['Image'] = $success['upload_success']['client_name'];
@@ -94,6 +95,7 @@ class Tourdescription extends CI_Controller
 
                 if (!$this->upload->do_upload('Image')) {
                     $error = array('upload_error' => $this->upload->display_errors());
+                    $params['Image'] = "picture.png";
                 } else {
                     $success = array('upload_success' => $this->upload->data());
                     $params['Image'] = $success['upload_success']['client_name'];

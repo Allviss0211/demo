@@ -24,11 +24,11 @@
                             <td><?php echo $t['Name'] ?></td>
                             <td><?php echo $t['Timeline']; ?></td>
                             <td><?php echo $t['Description']; ?></td>
-                            <td><img src="/upload_img/<?php echo ($t['Image'] != null || $t['Image'] != "") ? $t['Image'] : "picture.png" ?>" width="250px" height="150px"></td>
+                            <td><img src="/upload_img/<?php echo $t['Image'] ?>" width="250px" height="150px"></td>
                             <td><?php echo $t['Note']; ?></td>
                             <td>
                                 <a href="<?php echo site_url('tourdescription/edit/' . $t['IdDesciption']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Sửa</a>
-                                <a href="<?php echo site_url('tourdescription/remove/' . $t['IdDesciption']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Xóa</a>
+                                <a href="<?php echo site_url('tourdescription/remove/' . $t['IdDesciption']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Xóa </a>
                             </td>
                         </tr>
                     <?php } ?>
