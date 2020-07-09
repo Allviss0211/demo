@@ -7,6 +7,7 @@ class Tourdescription extends CI_Controller
         parent::__construct();
         $this->load->model('Tourdescription_model');
         $this->load->model('Tour_model');
+        $this->load->helper(array('form', 'url'));
     }
 
     /*
@@ -47,6 +48,18 @@ class Tourdescription extends CI_Controller
                 'Note' => $this->input->post('Note'),
             );
 
+            $config['upload_path'] = './upload_img/';
+            $config['allowed_types'] = 'gif|jpg|png';
+
+            $this->load->library('upload', $config);
+
+            if (!$this->upload->do_upload('Image')) {
+                $error = array('upload_error' => $this->upload->display_errors());
+            } else {
+                $success = array('upload_success' => $this->upload->data());
+                $params['Image'] = $success['upload_success']['client_name'];
+            }
+
             $tourdescription_id = $this->Tourdescription_model->add_tourdescription($params);
             redirect('tourdescription/index');
         } else {
@@ -74,6 +87,18 @@ class Tourdescription extends CI_Controller
                     'Note' => $this->input->post('Note'),
                 );
 
+                $config['upload_path'] = './upload_img/';
+                $config['allowed_types'] = 'gif|jpg|png';
+
+                $this->load->library('upload', $config);
+
+                if (!$this->upload->do_upload('Image')) {
+                    $error = array('upload_error' => $this->upload->display_errors());
+                } else {
+                    $success = array('upload_success' => $this->upload->data());
+                    $params['Image'] = $success['upload_success']['client_name'];
+                }
+
                 $this->Tourdescription_model->update_tourdescription($IdDesciption, $params);
                 redirect('tourdescription/index');
             } else {
@@ -99,6 +124,29 @@ class Tourdescription extends CI_Controller
         } else
             show_error('The tourdescription you are trying to delete does not exist.');
     }
-}
 
-?>
+    /*
+     * Upload Image
+     */
+    function upload_img()
+    {
+        $config['upload_path']   = './uploads/';
+        $config['allowed_types'] = 'gif|jpg|png';
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload($this->input->post('Image'))) {
+            $error = array('upload_error' => $this->upload->display_errors());
+            echo "<pre>";
+            print_r($error);
+            echo "</pre>";
+            return;
+        } else {
+            $success = array('upload_success' => $this->upload->data());
+            echo "<pre>";
+            print_r($success);
+            echo "</pre>";
+            return;
+        }
+    }
+}

@@ -4,7 +4,7 @@
             <div class="box-header with-border">
               	<h3 class="box-title">Chỉnh sửa chi tiết Tour</h3>
             </div>
-			<?php echo form_open('tourdescription/edit/'.$tourdescription['IdDesciption']); ?>
+			<?php echo form_open_multipart('tourdescription/edit/'.$tourdescription['IdDesciption']); ?>
 			<div class="box-body">
 				<div class="row clearfix">
 					<div class="col-md-6">

@@ -4,7 +4,7 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Thêm chi tiết Tour</h3>
 			</div>
-			<?php echo form_open('tourdescription/add'); ?>
+			<?php echo form_open_multipart('tourdescription/add'); ?>
 			<div class="box-body">
 				<div class="row clearfix">
 					<div class="col-md-6">
@@ -34,16 +34,7 @@
 					<div class="col-md-6">
 						<label for="Image" class="control-label">Hình ảnh</label>
 						<div class="form-group">
-							<!-- boostrap 3.3.6 -->
-							<div class="input-group mb-3">
-								<div class="custom-file">
-								<input type="file" name="Image" value="<?php echo $this->input->post('Image'); ?>" class="custom-file-input" id="Image" />
-									<!-- <label class="custom-file-label" for="inputGroupFile01">Chọn hình ảnh</label> -->
-								</div>
-							</div>
-
-							<!-- boostrap 4.0 -->
-							<!-- <input type="file" name="Image" value="<?php echo $this->input->post('Image'); ?>" class="form-control" id="Image" /> -->
+							<input type="file" name="Image" value="<?php echo $this->input->post('Image'); ?>" class="form-control" id="Image" />
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -55,7 +46,7 @@
 				</div>
 			</div>
 			<div class="box-footer">
-				<button type="submit" class="btn btn-success">
+				<button type="submit" name="Upload" class="btn btn-success">
 					<i class="fa fa-check"></i> Lưu
 				</button>
 			</div>
