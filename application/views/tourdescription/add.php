@@ -35,15 +35,15 @@
 						<label for="Image" class="control-label">Hình ảnh</label>
 						<div class="form-group">
 							<!-- boostrap 3.3.6 -->
-							<!-- <div class="input-group mb-3">
+							<div class="input-group mb-3">
 								<div class="custom-file">
 								<input type="file" name="Image" value="<?php echo $this->input->post('Image'); ?>" class="custom-file-input" id="Image" />
-									<label class="custom-file-label" for="inputGroupFile01">Chọn hình ảnh</label>
+									<!-- <label class="custom-file-label" for="inputGroupFile01">Chọn hình ảnh</label> -->
 								</div>
-							</div> -->
+							</div>
 
 							<!-- boostrap 4.0 -->
-							<input type="file" name="Image" value="<?php echo $this->input->post('Image'); ?>" class="form-control" id="Image" />
+							<!-- <input type="file" name="Image" value="<?php echo $this->input->post('Image'); ?>" class="form-control" id="Image" /> -->
 						</div>
 					</div>
 					<div class="col-md-6">

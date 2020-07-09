@@ -23,7 +23,7 @@ class Feedback extends CI_Controller
 				mail('touristhalfway@gmail.com', 'Phản hồi của khách hàng', $feed);
 				$data['_view'] = 'feedback';
 				$data['title'] = 'Góp ý';
-				redirect('layouts/home_main', $data);
+				$this->load->view('layouts/home_main', $data);
 			}
 		}
 		$data['_view'] = 'feedback';

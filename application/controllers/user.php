@@ -55,7 +55,7 @@ class User extends CI_Controller
     /*
      * Editing a user
      */
-    function edit_user($IdUser) 
+    function edit_user($IdUser)
     {
         // check if the user exists before trying to edit it
         $data['user'] = $this->User_model->get_user($IdUser);
@@ -156,8 +156,7 @@ class User extends CI_Controller
                 //print_r( $this->session->flashdata('error_login_message'));
                 redirect('user/login');
             }
-        } else
-        if (isset($_POST["btnSignUp"])) {
+        } else if (isset($_POST["btnSignUp"])) {
             $params = array(
                 'Username' => $this->input->post('txtUsernameSignup'),
                 'Password' => $this->input->post('txtPasswordSignUp'),
@@ -201,5 +200,4 @@ class User extends CI_Controller
         }
         redirect('home');
     }
-
 }
