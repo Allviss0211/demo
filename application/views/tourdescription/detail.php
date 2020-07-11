@@ -1,4 +1,4 @@
-<section class="thw-section info1 cid-s0mzz4vPkA" id="info1-2a" style="background-image: \/upload_img/<?php echo $tour['Banner'] ?>">
+<section class="thw-section info1 cid-s0mzz4vPkA" id="info1-2a" style="background-image: url(/upload_img/<?php echo $tour['Banner'] ?>)">
     <div class="thw-overlay" style="opacity: 0; background-color: rgb(239, 239, 239);">
     </div>
     <div class="container">
