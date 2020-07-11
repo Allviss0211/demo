@@ -75,10 +75,14 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'id14295187_allviss',
-	'password' => '9T]{5yv$!e{ss=tQ',
-	'database' => 'id14295187_qldulich',
+	'hostname' => '103.90.235.239',
+	'username' => 'dulich',
+	'password' => '7FBccT2SUgEchpzU',
+	'database' => 'qldulich',
+	// 'hostname' => 'localhost',
+	// 'username' => 'id14295187_allviss',
+	// 'password' => '9T]{5yv$!e{ss=tQ',
+	// 'database' => 'id14295187_qldulich',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
