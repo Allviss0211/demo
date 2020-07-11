@@ -64,27 +64,7 @@
 
                         <div class="card-box">
 
-                            <p class="thw-text thw-section-text thw-fonts-style display-7"><?php
-
-                                                                                            if (substr($des['Description'], 0, strpos($des['Description'], "Tối")) == "")
-
-                                                                                                if (substr($des['Description'], 0, strpos($des['Description'], "Trưa")) == "") {
-                                                                                                    $count = count(explode('\n',$des['Description']))/2 ;
-                                                                                                    if($count % 2 == 0) 
-                                                                                                    echo substr($des['Description'], 0, strpos($des['Description'], "Tối"));
-                                                                                                    else
-                                                                                                    echo explode('\n',$des['Description'],2)[0];
-                                                                                                } else
-
-                                                                                                    echo substr($des['Description'], 0, strpos($des['Description'], "Trưa"));
-
-                                                                                            else if (substr($des['Description'], 0, strpos($des['Description'], "Chiều")) == "")
-
-                                                                                                echo substr($des['Description'], 0, strpos($des['Description'], "Trưa"));
-
-                                                                                            else
-
-                                                                                                echo substr($des['Description'], 0, strpos($des['Description'], "Chiều")) ?></p>
+                            <p class="thw-text thw-section-text thw-fonts-style display-7"><?php explode('*',$des['Description'])[0] ?></p>
 
                         </div>
 
@@ -112,15 +92,7 @@
 
                         <div class="card-box">
 
-                            <p class="thw-text thw-section-text thw-fonts-style display-7"><?php if (strstr($des['Description'], "Tối") == "")
-
-                                                                                                echo  strstr($des['Description'], "Trưa");
-
-                                                                                            else if (strstr($des['Description'], "Chiều") == "")
-
-                                                                                                echo  strstr($des['Description'], "Trưa");
-
-                                                                                            else echo strstr($des['Description'], "Chiều")  ?></p>
+                            <p class="thw-text thw-section-text thw-fonts-style display-7"><?php explode('*',$des['Description'])[1]?></p>
 
                         </div>
 
