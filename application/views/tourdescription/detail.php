@@ -1,4 +1,4 @@
-<section class="thw-section info1 cid-s0mzz4vPkA" id="info1-2a">
+<section class="thw-section info1 cid-s0mzz4vPkA" id="info1-2a" style="background-image: \/upload_img/<?php echo $tour['Banner'] ?>">
     <div class="thw-overlay" style="opacity: 0; background-color: rgb(239, 239, 239);">
     </div>
     <div class="container">
@@ -79,7 +79,7 @@
                 <div class="card col-12 col-md-6 p-3 col-lg-3">
                     <div class="card-wrapper">
                         <div class="card-img">
-                            <a href="<?= site_url("tourdescription/detail?id=$tt[IdTour]") ?>"><img src="/resources/images/tn-506x296.jpg" alt="thw" title=""></a>
+                            <a href="<?= site_url("tourdescription/detail?id=$tt[IdTour]") ?>"><img src="/upload_img/<?php echo $tt['Banner'] ?>" alt="thw" title=""></a>
                         </div>
                         <div class="card-box">
                             <a href="<?= site_url("tourdescription/detail?id=$tt[IdTour]") ?>" class="text-danger">

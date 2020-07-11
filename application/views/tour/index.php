@@ -21,6 +21,7 @@
 						<th>Vé</th>
 						<th>Giá</th>
 						<th>Loại tour</th>
+						<th>Ảnh nền</th>
 						<th>Ghi chú</th>
 						<th>Thao tác</th>
 					</tr>
@@ -37,6 +38,7 @@
 							<td><?php echo $t['NoTicket']; ?></td>
 							<td><?php echo $t['Price']; ?></td>
 							<td><?php echo $t['NameTourType'] ?></td>
+							<td><?php echo $t['Banner'] ?></td>
 							<td><?php echo $t['Note']; ?></td>
 							<td>
 								<a href="<?php echo site_url('tour/edit/' . $t['IdTour']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Sửa</a>

@@ -1,4 +1,4 @@
-<!-- <section class="thw-section info2 cid-s0fEQGHpQF" id="info2-v" data-bg-video="https://www.youtube.com/watch?v=KbPxz0V8dHQ&amp;feature=youtu.be&amp;fbclid=IwAR2ZiqCNsg_GXHVrlrOmaQnTk_cLie4mc6Gua2JikKc0AYuNsSMVr2Lduxg">
+<section class="thw-section info2 cid-s0fEQGHpQF" id="info2-v" style="background-image: url(/resources/images/vietnam.gif)">
 
     <div class="thw-overlay" style="opacity: 0; background-color: rgb(35, 35, 35);">
     </div>
@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-</section> -->
+</section>
 <div style="padding-top: 100px;">
     <section class="services1 cid-s0m0XZ2TZr" id="services1-1c">
         <div class="container">
@@ -26,7 +26,7 @@
                         <div class="card-wrapper">
                             <div class="card-img">
                                 <a href="<?= site_url("tourdescription/detail?id=$t[IdTour]") ?>">
-                                    <img src="/resources/images/pq-696x407.jpg" alt="thw" title="" width="150px">
+                                    <img src="/upload_img/<?php echo $t['Banner'] ?>" alt="thw" title="" width="150px">
                                 </a>
                             </div>
                             <div class="card-box">

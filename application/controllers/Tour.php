@@ -65,6 +65,7 @@ class Tour extends CI_Controller
                 'NoTicket' => $this->input->post('NoTicket'),
                 'Price' => $this->input->post('Price'),
                 'IdTourType' => $this->input->post('IdTourType'),
+                'Banner' => $this->input->post('Image'),
                 'Note' => $this->input->post('Note'),
             );
 
@@ -98,6 +99,7 @@ class Tour extends CI_Controller
                     'NoTicket' => $this->input->post('NoTicket'),
                     'Price' => $this->input->post('Price'),
                     'IdTourType' => $this->input->post('IdTourType'),
+                    'Banner' => $this->input->post('Image'),
                     'Note' => $this->input->post('Note'),
                 );
 

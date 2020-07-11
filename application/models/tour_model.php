@@ -32,7 +32,7 @@ class Tour_model extends CI_Model
      */
     function get_all_tour()
     {
-        $this->db->select('IdTour, tour.Name as NameTour, tourtype.Name as NameTourType, Schedule, Start, NoDay, NoNight, Vehicle, Hotel, NoTicket, Price, tour.Note');
+        $this->db->select('IdTour, tour.Name as NameTour, tourtype.Name as NameTourType, Schedule, Start, NoDay, NoNight, Vehicle, Hotel, NoTicket, Price,tour.Banner, tour.Note');
         $this->db->from('tour');
         $this->db->join('tourtype', 'tour.IdTourType = tourtype.IdTourType');
         $this->db->order_by('tourtype.IdTourType', 'asc');

@@ -74,6 +74,12 @@
 						</div>
 					</div>
 					<div class="col-md-6">
+						<label for="Image" class="control-label">Hình ảnh</label>
+						<div class="form-group">
+							<input type="file" name="Image" value="<?php echo $this->input->post('Image'); ?>" class="form-control" id="Image" />
+						</div>
+					</div>
+					<div class="col-md-6">
 						<label for="Note" class="control-label">Ghi chú</label>
 						<div class="form-group">
 							<input type="text" name="Note" value="<?php echo $this->input->post('Note'); ?>" class="form-control" id="Note" />
