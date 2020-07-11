@@ -14,7 +14,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-    <link rel="shortcut icon" href="/resources/images/101924093-246119703475650-424695557458493440-n-1-122x99.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/resources/images/Logo_web.png" type="image/x-icon">
 
     <meta name="description" content="">
 
@@ -76,7 +76,7 @@
 
                         <a href="<?= base_url("home") ?>">
 
-                            <img src="/resources/images/101924093-246119703475650-424695557458493440-n-1-122x99.png" alt="thw" title="" style="height: 3.8rem;">
+                            <img src="/resources/images/Logo_web.png" alt="thw" title="" style="height: 3.8rem;">
 
                         </a>
 
