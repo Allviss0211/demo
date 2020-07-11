@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '103.90.235.239',
-	'username' => 'dulich',
-	'password' => '7FBccT2SUgEchpzU',
-	'database' => 'qldulich',
+	'hostname' => 'localhost',
+	'username' => 'id14295187_allviss',
+	'password' => '9T]{5yv$!e{ss=tQ',
+	'database' => 'id14295187_qldulich',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -90,7 +90,7 @@ $db['default'] = array(
 	'swap_pre' => '',
 	'encrypt' => FALSE,
 	'compress' => FALSE,
-	'stricton' => FALSE,
+	'stricton' => TRUE,
 	'failover' => array(),
 	'save_queries' => TRUE
 );
