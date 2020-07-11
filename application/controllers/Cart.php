@@ -30,7 +30,7 @@ class Cart extends CI_Controller
                 mail('touristhalfway@gmail.com', 'Đơn của khách hàng ' . $data['user']['Fullname'], $pay);
             }
             $bill = array(
-                'OrderDate' => date('yyyy/MM/dd'),
+                'OrderDate' => date('Y/m/d'),
                 'Status' => $this->input->post('method'),
                 'IdUser' => $data['user']['IdUser'] ?? '',
                 'CustomerName' => $this->input->post('name'),

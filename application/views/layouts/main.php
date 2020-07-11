@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="../assets/images/101924093-246119703475650-424695557458493440-n-1-122x99.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/resources/images/101924093-246119703475650-424695557458493440-n-1-122x99.png" type="image/x-icon">
     <title>Tourist Half Way</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
