@@ -37,9 +37,9 @@ class Tourdescription extends CI_Controller
 
                 $data['tour'] = $this->Tour_model->get_all_tour();
 
-                // $data['tourdescription'] = $this->Tourdescription_model->get_all_tourdescription();
+                $data['tourdescription'] = $this->Tourdescription_model->get_all_tourdescription();
 
-                $data['tourdescription'] = $this->Tourdescription_model->get_tourdescription_by_IdTour($this->input->post("IdTour"));
+                // $data['tourdescription'] = $this->Tourdescription_model->get_tourdescription_by_IdTour($this->input->post("IdTour"));
 
                 $data['_view'] = 'tourdescription/index';
 
@@ -155,7 +155,7 @@ class Tourdescription extends CI_Controller
 
                     $tourdescription_id = $this->Tourdescription_model->add_tourdescription($params);
 
-                    redirect('tourdescription/get_tourdescription_by_IdTour');
+                    redirect('tourdescription/index');
                 } else {
 
                     $data['tour'] = $this->Tour_model->get_all_tour();
@@ -242,7 +242,7 @@ class Tourdescription extends CI_Controller
 
                         $this->Tourdescription_model->update_tourdescription($IdDesciption, $params);
 
-                        redirect('tourdescription/get_tourdescription_by_IdTour');
+                        redirect('tourdescription/index');
                     } else {
 
                         $data['tour'] = $this->Tour_model->get_all_tour();
