@@ -10,7 +10,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="shortcut icon" href="/resources/images/101924093-246119703475650-424695557458493440-n-1-122x99.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/resources/images/Logo_web.png" type="image/x-icon">
 
     <title>Tourist Half Way</title>
 
@@ -98,8 +98,6 @@
 
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-                                <img src="/resources/images/Logo_web.png" class="user-image" alt="User Image">
-
                                 <span class="hidden-xs"> <?php echo $_SESSION['lgFullname'] ?? "<strong style='color:red'> NotLogin </strong>" ?> </span>
 
                             </a>
@@ -110,7 +108,7 @@
 
                                 <li class="user-header">
 
-                                    <img src="<?php echo site_url('/resources/images/Logo_web.png'); ?>" class="img-circle" alt="User Image">
+                                    <img src="<?php echo site_url('/resources/images/Logo_web.png'); ?>" class="img-circle" alt="User Image" style="background-color: white; opacity:0.9">
 
                                     <p>
 
@@ -164,7 +162,7 @@
 
                     <div class="pull-left image">
 
-                        <img src="<?php echo site_url('/resources/images/Allviss_Logo.png'); ?>" class="img-circle" alt="User Image">
+                        <img src="<?php echo site_url('/resources/images/Logo_web.png'); ?>" class="img-circle" alt="User Image" style="background-color: :white;">
 
                     </div>
 

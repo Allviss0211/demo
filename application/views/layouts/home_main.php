@@ -104,9 +104,7 @@
 
                         <a class="nav-link link text-primary display-4" href="<?= base_url("home") ?>">
 
-                            <span class="thwib-home thw-iconfont thw-iconfont-btn"></span>Trang chủ &nbsp; &nbsp; &nbsp;
-
-                            &nbsp; </a>
+                            <span class="thwib-home thw-iconfont thw-iconfont-btn"></span>Trang chủ &nbsp;</a>
 
                     </li>
 
@@ -114,9 +112,7 @@
 
                         <a class="nav-link link text-primary display-4" href="<?= base_url("tour/event") ?>">
 
-                            <span class="thwib-gift thw-iconfont thw-iconfont-btn"></span>Sự kiện &nbsp; &nbsp; &nbsp;
-
-                            &nbsp; </a></li>
+                            <span class="thwib-gift thw-iconfont thw-iconfont-btn"></span>Sự kiện &nbsp;</a></li>
 
                     <li class="nav-item">
 
@@ -124,7 +120,7 @@
 
                             <span class="thwib-contact-form thw-iconfont thw-iconfont-btn"></span>
 
-                            Giới thiệu &nbsp; &nbsp; &nbsp; &nbsp</a>
+                            Giới thiệu &nbsp;</a>
 
                     </li>
 
@@ -138,7 +134,7 @@
 
                                 <a class="nav-link link text-primary display-4" href="<?= base_url("dashboard?id={$_SESSION['lgIdUser']}") ?>"><span class="thwib-user thw-iconfont thw-iconfont-btn">
 
-                                    </span><?php echo $_SESSION["lgFullname"] ?> &nbsp; &nbsp; &nbsp;&nbsp;
+                                    </span><?php echo $_SESSION["lgFullname"] ?> &nbsp;
 
                                 </a>
 
@@ -150,7 +146,7 @@
 
                                 <a class="nav-link link text-primary display-4" href="<?= base_url("user/edit_user/{$_SESSION['lgIdUser']}") ?>"><span class="thwib-user thw-iconfont thw-iconfont-btn">
 
-                                    </span><?php echo $_SESSION["lgFullname"] ?>&nbsp; &nbsp; &nbsp;&nbsp;
+                                    </span><?php echo $_SESSION["lgFullname"] ?>&nbsp;
 
                                 </a>
 
@@ -160,21 +156,20 @@
 
                                 <a class="nav-link link text-primary display-4" href="<?php echo base_url('user/logout') ?>"><span class="thwib-login thw-iconfont thw-iconfont-btn">
 
-                                    </span> Đăng xuất &nbsp; &nbsp; &nbsp;&nbsp;
+                                    </span> Đăng xuất &nbsp;
 
                                 </a>
 
                             </li>
 
                         <?php }
-
                     } else { ?>
 
                         <li class="nav-item">
 
                             <a class="nav-link link text-primary display-4" href="<?php echo base_url("user/login") ?>"><span class="thwib-lock thw-iconfont thw-iconfont-btn">
 
-                                </span>Đăng nhập &nbsp; &nbsp; &nbsp;&nbsp;
+                                </span>Đăng nhập &nbsp;
 
                             </a>
 
@@ -184,9 +179,8 @@
 
                     ?>
 
+
                 </ul>
-
-
 
             </div>
 
