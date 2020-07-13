@@ -48,9 +48,30 @@ class Cart extends CI_Controller
 
             $subject = 'Cám ơn ' . $this->input->post('name') . ' đã đặt tour ' . $data['tour']['Name'];
 
-            $message = 'Cám ơn bạn đã quan tâm và ủng hộ Tourist Half Way. Chúc bạn và gia đình có một chuyến đi vui vẻ! Chúng tôi rất hân hạnh được phục vụ!';
+            $message = 
+           "Họ tên : " . $this->input->post('name'). "
+            Email : " . $this->input->post('email') . "
+            Số điện thoại : " . $this->input->post('phone') . "
+            Địa chỉ : " . $this->input->post('address') . "
+            Số người lớn : " . $this->input->post('amountAdult') . "
+            Số trẻ em : " . $this->input->post('amountChildren') . "
+            Phương thức thanh toán : " . $this->input->post('method') . "%
+            Tour : " . $this->input->post('tour') . "
+            Tổng tiền : " . $this->input->post('total') . "
+            Đã thanh toán : " . $this->input->post('pay') . '
+            Cám ơn bạn đã quan tâm và ủng hộ Tourist Half Way. Chúc bạn và gia đình có một chuyến đi vui vẻ! Chúng tôi rất hân hạnh được phục vụ!';
 
-            $pay = $this->input->post('pay');
+            $pay = 
+           "Họ tên : " . $this->input->post('name'). "
+            Email : " . $this->input->post('email') . "
+            Số điện thoại : " . $this->input->post('phone') . "
+            Địa chỉ : " . $this->input->post('address') . "
+            Số người lớn : " . $this->input->post('amountAdult') . "
+            Số trẻ em : " . $this->input->post('amountChildren') . "
+            Phương thức thanh toán : " . $this->input->post('method') . "%
+            Tour : " . $this->input->post('tour') . "
+            Tổng tiền : " . $this->input->post('total') . "
+            Đã thanh toán : " . $this->input->post('pay');
 
             if ($to != '') {
 
