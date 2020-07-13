@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://demo.test/';
+// $config['base_url'] = 'https://tourist-half-way.000webhostapp.com/';
 
 /*
 |--------------------------------------------------------------------------
