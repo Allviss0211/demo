@@ -19,6 +19,12 @@ class Tourdescription extends CI_Controller
             if ($_SESSION['lgRole'] == 1) {
                 $data['tourdescription'] = $this->Tourdescription_model->get_all_tourdescription();
 
+                $data['tour'] = $this->Tour_model->get_all_tour();
+
+                $data['tourdescription'] = $this->Tourdescription_model->get_all_tourdescription();
+
+                // $data['tourdescription'] = $this->Tourdescription_model->get_tourdescription_by_IdTour($this->input->post("IdTour"));
+
                 $data['_view'] = 'tourdescription/index';
                 $this->load->view('layouts/main', $data);
             } else
@@ -71,6 +77,7 @@ class Tourdescription extends CI_Controller
                     }
 
                     $tourdescription_id = $this->Tourdescription_model->add_tourdescription($params);
+
                     redirect('tourdescription/index');
                 } else {
                     $data['tour'] = $this->Tour_model->get_all_tour();
@@ -118,6 +125,7 @@ class Tourdescription extends CI_Controller
                         }
 
                         $this->Tourdescription_model->update_tourdescription($IdDesciption, $params);
+
                         redirect('tourdescription/index');
                     } else {
                         $data['tour'] = $this->Tour_model->get_all_tour();
