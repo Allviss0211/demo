@@ -339,7 +339,7 @@ class User extends CI_Controller
                     redirect("home");
                 } else {
 
-                    $this->session->set_flashdata('error_login_message', 'Lỗi login cmnr');
+                    $this->session->set_flashdata('error_login_message', 'Sai tài khoản hoặc mật khẩu');
 
                     //print_r( $this->session->flashdata('error_login_message'));
 
@@ -347,7 +347,7 @@ class User extends CI_Controller
                 }
             } else if ($userName == "" && $passWord == "") {
 
-                $this->session->set_flashdata('error_login_message', 'Điền dô mới đăng nhập được con điên');
+                $this->session->set_flashdata('error_login_message', 'Đăng nhập thất bại');
 
                 //print_r( $this->session->flashdata('error_login_message'));
 
@@ -367,7 +367,7 @@ class User extends CI_Controller
 
                 'IdentityCard' => $this->input->post('txtIdentityCard'),
 
-                'Birthday' => $this->input->post('txtBirthday'),
+                'Birthday' => $this->input->post('txtBirthday') == "" ? date('Y/m/d') : $this->input->post('txtBirthday'),
 
                 'Phone' => $this->input->post('txtPhone'),
 
@@ -395,13 +395,13 @@ class User extends CI_Controller
                 redirect('user/login');
             } else if ($params_null) {
 
-                $this->session->set_flashdata('error_signup_message', 'Điền thiếu thông tin cmnr');
+                $this->session->set_flashdata('error_signup_message', 'Thông tin còn thiếu, vui lòng nhập đầy đủ thông tin');
 
                 redirect('user/login');
             }
             else {
 
-                $this->session->set_flashdata('error_signup_message', 'Lỗi signup cmnr');
+                $this->session->set_flashdata('error_signup_message', 'Người dùng đã tồn tại');
 
                 // print_r( $this->session->flashdata('error_signup_message'));
 

@@ -4,12 +4,13 @@ section {
 }
 
 .description {
-  width: 100%;
+  width: auto;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
+  display: -webkit-box ;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 3;
 }
 
 .label-edit-user {
@@ -307,6 +308,7 @@ figure[thw-media-size] {
 }
 
 .card {
+  display: inline-block;
   background-color: transparent;
   border: none;
 }
