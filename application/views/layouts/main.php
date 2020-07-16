@@ -374,7 +374,7 @@
 
 
 
-                            <i class="fa fa-dashboard"></i> <span>Bảng điều khiển</span>
+                            <i class="fa fa-dashboard"></i> <span>Thống kê</span>
 
 
 
