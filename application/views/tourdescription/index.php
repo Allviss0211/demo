@@ -1,8 +1,8 @@
 <div class="row"> 
  
-    <div class="col-md-12" id="list_of_tourdescription"> 
+    <div class="col-md-12"> 
  
-        <div class="box"> 
+        <div class="box"   id="list_of_tourdescription"> 
  
             <div class="box-header"> 
  
@@ -26,7 +26,7 @@
  
                     <select name="IdTour" id="IdTour" class="form-control" onchange="onChangeTour(this.value)"> 
  
-                        <option value="0"> - - - Chọn Tour - - - </option>; 
+                        <option value="0"> - - - Chọn Tour - - - </option>;
  
                         <?php foreach ($tour as $t) { 
  
