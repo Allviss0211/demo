@@ -165,7 +165,7 @@
                             yAxisID: 'y-axis-0'
                         },
                         {
-                            label: ["Trong nước"],
+                            label: ["Ngoài nước"],
                             backgroundColor: colors[1],
                             borderColor: colors[1],
                             fill: false,
