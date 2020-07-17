@@ -1,6 +1,6 @@
 <div class="row"> 
  
-    <div class="col-md-12" id="list_of_tourdescription"> 
+    <div class="col-md-12"  id="list_of_tourdescription"> 
  
         <div class="box"> 
  

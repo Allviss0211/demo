@@ -132,68 +132,56 @@ class User extends CI_Controller
     function edit_user($IdUser)
 
     {
+        // check if the user exists before trying to edit it
 
-        if (isset($_SESSION['isLogin'])) {
-
-            if ($_SESSION['lgRole'] == 1) {
-
-                // check if the user exists before trying to edit it
-
-                $data['user'] = $this->User_model->get_user($IdUser);
+        $data['user'] = $this->User_model->get_user($IdUser);
 
 
 
-                if (isset($data['user']['IdUser'])) {
+        if (isset($data['user']['IdUser'])) {
 
-                    if (isset($_POST) && count($_POST) > 0) {
+            if (isset($_POST) && count($_POST) > 0) {
 
-                        $params = array(
+                $params = array(
 
-                            'Username' => $this->input->post('Username'),
+                    'Username' => $this->input->post('Username'),
 
-                            'Password' => $this->input->post('Password'),
+                    'Password' => $this->input->post('Password'),
 
-                            'Fullname' => $this->input->post('Fullname'),
+                    'Fullname' => $this->input->post('Fullname'),
 
-                            'IdentityCard' => $this->input->post('IdentityCard'),
+                    'IdentityCard' => $this->input->post('IdentityCard'),
 
-                            'Birthday' => $this->input->post('Birthday'),
+                    'Birthday' => $this->input->post('Birthday'),
 
-                            'Phone' => $this->input->post('Phone'),
+                    'Phone' => $this->input->post('Phone'),
 
-                            'Email' => $this->input->post('Email'),
+                    'Email' => $this->input->post('Email'),
 
-                            'Address' => $this->input->post('Address'),
+                    'Address' => $this->input->post('Address'),
 
-                            'Note' => $this->input->post('Note'),
+                    'Note' => $this->input->post('Note'),
 
-                        );
+                );
 
 
 
-                        $this->User_model->update_user($IdUser, $params);
+                $this->User_model->update_user($IdUser, $params);
 
-                        redirect("user/edit_user/$IdUser");
-                    } else {
+                redirect("user/edit_user/$IdUser");
+            } else {
 
-                        $data['decentralization'] = $this->Decentralization_model->get_all_decentralization();
+                $data['decentralization'] = $this->Decentralization_model->get_all_decentralization();
 
-                        $data['_view'] = 'user/edit_user';
+                $data['_view'] = 'user/edit_user';
 
-                        $data['title'] = $data['user']['Fullname'];
+                $data['title'] = $data['user']['Fullname'];
 
-                        $this->load->view('layouts/home_main', $data);
-                    }
-                } else
+                $this->load->view('layouts/home_main', $data);
+            }
+        } else
 
-                    show_error('The user you are trying to edit does not exist.');
-            } else
-
-                redirect("home");
-        } else {
-
-            redirect("user/login");
-        }
+            show_error('The user you are trying to edit does not exist.');
     }
 
 
@@ -398,8 +386,7 @@ class User extends CI_Controller
                 $this->session->set_flashdata('error_signup_message', 'Thông tin còn thiếu, vui lòng nhập đầy đủ thông tin');
 
                 redirect('user/login');
-            }
-            else {
+            } else {
 
                 $this->session->set_flashdata('error_signup_message', 'Người dùng đã tồn tại');
 
@@ -407,8 +394,7 @@ class User extends CI_Controller
 
                 redirect('user/login');
             }
-        }
-        else
+        } else
             $this->load->view("user/login");
     }
 
@@ -432,5 +418,28 @@ class User extends CI_Controller
         }
 
         redirect('home');
+    }
+
+    function forgot()
+    {
+        if (isset($_POST['btnForgot'])) {
+            $username =  $this->input->post('txtUsernameForgot');
+            $user = $this->User_model->check_user($username);
+            if($user != '')
+            {
+                $passwordplain  = rand(1000000,99999999);
+                $user['Password'] = $passwordplain;
+                $this->User_model->update_password($username,$user);
+                mail($user['Email'],"Mật khẩu mới","Mật khẩu mới của bạn đã được cập nhật thành ".$passwordplain);
+                $this->session->set_flashdata('error_forgot_message','Một mật khẩu mới đã được gửi về email của bạn');
+                redirect('user/login');
+            }
+            else
+            {
+                $this->session->set_flashdata('error_forgot_message','Tài khoản không tồn tại');
+                redirect('user/login');
+            }
+        } else
+            $this->load->view("user/login");
     }
 }
