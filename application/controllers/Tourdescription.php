@@ -45,6 +45,7 @@ class Tourdescription extends CI_Controller
  
                 $data['tourdescription'] = $this->Tourdescription_model->get_tourdescription_by_IdTour($this->input->post("IdTour")); 
  
+                // echo json_encode($data);
                 $this->load->view('tourdescription/index', $data); 
             } 
         } 
