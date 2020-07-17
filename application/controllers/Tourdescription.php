@@ -34,21 +34,21 @@ class Tourdescription extends CI_Controller
         }
     }
 
-    function get_tourdescription_by_IdTour() 
-    { 
- 
-        if (isset($_SESSION['isLogin'])) { 
- 
-            if ($_SESSION['lgRole'] == 1) { 
- 
-                $data['tour'] = $this->Tour_model->get_all_tour(); 
- 
-                $data['tourdescription'] = $this->Tourdescription_model->get_tourdescription_by_IdTour($this->input->post("IdTour")); 
- 
-                // echo json_encode($data);
-                $this->load->view('tourdescription/index', $data); 
-            } 
-        } 
+    function get_tourdescription_by_IdTour()
+    {
+
+        if (isset($_SESSION['isLogin'])) {
+
+            if ($_SESSION['lgRole'] == 1) {
+
+                $data['tourdescription'] = $this->Tourdescription_model->get_tourdescription_by_IdTour($this->input->post("IdTour"));
+
+                echo json_encode($data);
+
+                // $this->load->view('tourdescription/index', $data); 
+                
+            }
+        }
     }
 
     /*

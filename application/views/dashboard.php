@@ -70,7 +70,7 @@
     function PieChart(controller, idCanvas, nameChart) {
         $.ajax({
             url: "<?php echo base_url() ?>" + controller,
-            type: "GET",
+            type: "GET", 
             success: function(data) {
                 console.log(data);
                 let res = JSON.parse(data);
@@ -129,7 +129,7 @@
     function LineChart(controller, idCanvas, NameChart) {
         $.ajax({
             url: "<?php echo base_url() ?>" + controller,
-            type: "GET",
+            type: "GET", 
             success: function(data) {
                 console.log(data);
                 let res = JSON.parse(data);
@@ -138,17 +138,13 @@
 
                 // console.log(keys);
 
-                let labels = [];
                 let points = [];
-                let colors = [];
+                let colors = [getRandomColor(), getRandomColor()];
 
                 for (i in keys) {
-                    labels.push(keys[i]);
                     points.push(parseInt(res[0][keys[i]]));
-                    colors.push(getRandomColor());
                 }
 
-                console.log(labels);
                 console.log(points);
                 console.log(colors);
 
